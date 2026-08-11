@@ -17,7 +17,7 @@
 - [x] Install i18next, license-checker
 - [x] Add proprietary LICENSE + ATTRIBUTION.md
 - [x] Wire i18n HR/EN and basic app shell (profile + modes placeholders)
-- [ ] Init git, push, privatize remote
+- [x] Init git, push, privatize remote
 - [x] Verify `npm run build` (manifest PWA; SW deferred to Phase 7)
 
 ## Process Notes
@@ -50,7 +50,8 @@
 
 ## Result
 
-- In progress (git remote / private pending).
+- Success: bootstrap on `main` (`0af111c`), build OK, licenses mostly MIT/ISC/Apache.
+- Service worker deferred to Phase 7; static web manifest present.
 
 ## Future Considerations
 
