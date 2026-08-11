@@ -349,5 +349,56 @@ main {
   font-size: 1.05rem;
 }
 
+.mini-route {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mini-route-svg {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background: #d9e8ef;
+}
+
+.route-line {
+  stroke: var(--accent-deep);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 4;
+}
+
+.route-line.secondary {
+  stroke: #6a7f90;
+  stroke-dasharray: 4 4;
+}
+
+.route-home {
+  fill: #1f6f5b;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.route-target {
+  fill: #c45c26;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.route-target.secondary {
+  fill: #6a7f90;
+}
+
+.compass-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 640px) {
+  .compass-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
 
 

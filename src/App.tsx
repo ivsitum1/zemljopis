@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HomeScreen, type AppMode } from './components/HomeScreen'
-import { ModePlaceholder } from './components/ModePlaceholder'
 import { SetupScreen } from './components/SetupScreen'
+import { DistanceMode } from './modes/distance/DistanceMode'
 import { MapMode } from './modes/map/MapMode'
 import { PlacesMode } from './modes/places/PlacesMode'
 import { PlatesMode } from './modes/plates/PlatesMode'
@@ -74,12 +74,12 @@ function App() {
           <PlacesMode level={profile.level} onBack={handleBackHome} />
         ) : null}
 
-        {screen === 'mode' &&
-        activeMode &&
-        activeMode !== 'map' &&
-        activeMode !== 'plates' &&
-        activeMode !== 'places' ? (
-          <ModePlaceholder mode={activeMode} onBack={handleBackHome} />
+        {screen === 'mode' && activeMode === 'distance' && profile ? (
+          <DistanceMode
+            level={profile.level}
+            homeCityId={profile.homeCityId}
+            onBack={handleBackHome}
+          />
         ) : null}
       </main>
     </div>

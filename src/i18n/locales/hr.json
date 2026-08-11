@@ -85,5 +85,27 @@
     "advancedLocked": "Napredne činjenice uključi razinom 3+.",
     "stub": "Kratki zapis",
     "stubNote": "Neki gradovi imaju samo kratki zapis — dopunit ćemo ih kasnije."
+  },
+  "distance": {
+    "fromHome": "Od doma: {{city}}",
+    "airNote": "Udaljenost je zračna (ptičja), ne cestovna.",
+    "score": "Bodovi: {{correct}}/{{total}}",
+    "askDistance": "Koliko je otprilike do mjesta {{place}}?",
+    "askDirection": "U kojem je smjeru {{place}} od doma?",
+    "askCloser": "Što je bliže domu?",
+    "wrong": "Netočno — pokušaj ponovno.",
+    "revealKm": "Točno! Zračna udaljenost je oko {{km}} km.",
+    "revealDirection": "Točno! Smjer: {{dir}} (oko {{km}} km).",
+    "revealCloser": "{{a}} ≈ {{kmA}} km, {{b}} ≈ {{kmB}} km.",
+    "dirs": {
+      "N": "Sjever",
+      "NE": "Sjeveroistok",
+      "E": "Istok",
+      "SE": "Jugoistok",
+      "S": "Jug",
+      "SW": "Jugozapad",
+      "W": "Zapad",
+      "NW": "Sjeverozapad"
+    }
   }
 }

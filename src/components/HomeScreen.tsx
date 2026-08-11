@@ -45,7 +45,6 @@ export function HomeScreen({ profile, onOpenMode, onEditProfile }: HomeScreenPro
           >
             <strong>{t(`modes.${mode}.title`)}</strong>
             <span>{t(`modes.${mode}.desc`)}</span>
-            {mode === 'distance' ? <em>{t('home.comingSoon')}</em> : null}
           </button>
         ))}
       </div>

@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview --host",
-    "licenses": "license-checker --summary"
+    "licenses": "license-checker --summary",
+    "test": "vitest run"
   },
   "dependencies": {
     "i18next": "^26.3.6",
@@ -25,6 +26,7 @@
     "license-checker": "^25.0.1",
     "oxlint": "^1.75.0",
     "typescript": "~6.0.2",
-    "vite": "^8.2.0"
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
   }
 }

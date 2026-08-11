@@ -85,5 +85,27 @@
     "advancedLocked": "Unlock advanced facts with level 3+.",
     "stub": "Short note",
     "stubNote": "Some cities only have a short note for now — we will expand them later."
+  },
+  "distance": {
+    "fromHome": "From home: {{city}}",
+    "airNote": "Distance is as-the-crow-flies, not by road.",
+    "score": "Score: {{correct}}/{{total}}",
+    "askDistance": "About how far is {{place}}?",
+    "askDirection": "Which direction is {{place}} from home?",
+    "askCloser": "Which is closer to home?",
+    "wrong": "Not quite — try again.",
+    "revealKm": "Correct! Straight-line distance is about {{km}} km.",
+    "revealDirection": "Correct! Direction: {{dir}} (about {{km}} km).",
+    "revealCloser": "{{a}} ≈ {{kmA}} km, {{b}} ≈ {{kmB}} km.",
+    "dirs": {
+      "N": "North",
+      "NE": "Northeast",
+      "E": "East",
+      "SE": "Southeast",
+      "S": "South",
+      "SW": "Southwest",
+      "W": "West",
+      "NW": "Northwest"
+    }
   }
 }
