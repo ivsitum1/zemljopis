@@ -1,0 +1,60 @@
+{
+  "app": {
+    "name": "Zemljopis",
+    "tagline": "Practice maps, plates, and distances"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "plates": "Plates",
+    "places": "Places",
+    "distance": "Distance",
+    "settings": "Settings"
+  },
+  "setup": {
+    "title": "Your profile",
+    "nameLabel": "Name",
+    "namePlaceholder": "e.g. Ana",
+    "homeLabel": "Home (city)",
+    "levelLabel": "Difficulty level",
+    "languageLabel": "Language",
+    "save": "Save and start",
+    "changeProfile": "Change profile"
+  },
+  "levels": {
+    "1": "1 — Hometown",
+    "2": "2 — Croatia",
+    "3": "3 — Croatia+",
+    "4": "4 — Europe / serious",
+    "5": "5 — Challenge"
+  },
+  "home": {
+    "welcome": "Hi, {{name}}!",
+    "from": "Home: {{city}}",
+    "chooseMode": "Choose a practice mode",
+    "comingSoon": "Coming soon"
+  },
+  "modes": {
+    "map": {
+      "title": "Map",
+      "desc": "Find counties and cities on the map"
+    },
+    "plates": {
+      "title": "Plates",
+      "desc": "Match registration codes to places"
+    },
+    "places": {
+      "title": "Places",
+      "desc": "What is nearby and what a place is known for"
+    },
+    "distance": {
+      "title": "Distance",
+      "desc": "How far and in which direction"
+    }
+  },
+  "common": {
+    "back": "Back",
+    "hr": "Hrvatski",
+    "en": "English"
+  }
+}

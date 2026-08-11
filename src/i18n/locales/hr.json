@@ -1,0 +1,60 @@
+{
+  "app": {
+    "name": "Zemljopis",
+    "tagline": "Vježbaj karte, tablice i udaljenosti"
+  },
+  "nav": {
+    "home": "Početna",
+    "map": "Karta",
+    "plates": "Tablice",
+    "places": "Mjesta",
+    "distance": "Udaljenost",
+    "settings": "Postavke"
+  },
+  "setup": {
+    "title": "Tvoj profil",
+    "nameLabel": "Ime",
+    "namePlaceholder": "npr. Ana",
+    "homeLabel": "Dom (grad)",
+    "levelLabel": "Razina težine",
+    "languageLabel": "Jezik",
+    "save": "Spremi i kreni",
+    "changeProfile": "Promijeni profil"
+  },
+  "levels": {
+    "1": "1 — Zavičaj",
+    "2": "2 — Hrvatska",
+    "3": "3 — Hrvatska+",
+    "4": "4 — Europa / ozbiljno",
+    "5": "5 — Izazov"
+  },
+  "home": {
+    "welcome": "Bok, {{name}}!",
+    "from": "Dom: {{city}}",
+    "chooseMode": "Odaberi način vježbanja",
+    "comingSoon": "Uskoro"
+  },
+  "modes": {
+    "map": {
+      "title": "Karta",
+      "desc": "Pronađi županije i gradove na karti"
+    },
+    "plates": {
+      "title": "Tablice",
+      "desc": "Poveži registracijske oznake s mjestima"
+    },
+    "places": {
+      "title": "Mjesta",
+      "desc": "Što ima u okolici i po čemu je poznato"
+    },
+    "distance": {
+      "title": "Udaljenost",
+      "desc": "Koliko je daleko i u kojem smjeru"
+    }
+  },
+  "common": {
+    "back": "Natrag",
+    "hr": "Hrvatski",
+    "en": "English"
+  }
+}
