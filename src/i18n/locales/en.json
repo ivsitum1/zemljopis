@@ -63,5 +63,14 @@
     "correct": "Correct!",
     "wrong": "That is {{name}}. Try again.",
     "hint": "Tap a county on the map."
+  },
+  "plates": {
+    "promptCode": "Which city / county is this plate?",
+    "promptPlace": "Which plate code is for {{place}}?",
+    "score": "Score: {{correct}}/{{total}}",
+    "correct": "Correct!",
+    "wrong": "Not quite — try again.",
+    "hint": "Pick one answer.",
+    "reveal": "{{code}} = {{city}} ({{county}})"
   }
 }

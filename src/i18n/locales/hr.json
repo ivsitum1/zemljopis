@@ -63,5 +63,14 @@
     "correct": "Točno!",
     "wrong": "To je {{name}}. Pokušaj ponovno.",
     "hint": "Dodirni županiju na karti."
+  },
+  "plates": {
+    "promptCode": "Koji je grad / županija za oznaku?",
+    "promptPlace": "Koja je oznaka za {{place}}?",
+    "score": "Bodovi: {{correct}}/{{total}}",
+    "correct": "Točno!",
+    "wrong": "Netočno — pokušaj ponovno.",
+    "hint": "Odaberi jedan odgovor.",
+    "reveal": "{{code}} = {{city}} ({{county}})"
   }
 }

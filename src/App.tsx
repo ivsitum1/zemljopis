@@ -4,6 +4,7 @@ import { HomeScreen, type AppMode } from './components/HomeScreen'
 import { ModePlaceholder } from './components/ModePlaceholder'
 import { SetupScreen } from './components/SetupScreen'
 import { MapMode } from './modes/map/MapMode'
+import { PlatesMode } from './modes/plates/PlatesMode'
 import { loadProfile, saveProfile } from './storage/profile'
 import type { UserProfile } from './types/profile'
 import './App.css'
@@ -64,7 +65,11 @@ function App() {
           <MapMode level={profile.level} onBack={handleBackHome} />
         ) : null}
 
-        {screen === 'mode' && activeMode && activeMode !== 'map' ? (
+        {screen === 'mode' && activeMode === 'plates' && profile ? (
+          <PlatesMode level={profile.level} onBack={handleBackHome} />
+        ) : null}
+
+        {screen === 'mode' && activeMode && activeMode !== 'map' && activeMode !== 'plates' ? (
           <ModePlaceholder mode={activeMode} onBack={handleBackHome} />
         ) : null}
       </main>
