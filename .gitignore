@@ -29,3 +29,10 @@ dev-dist
 # OS / OneDrive noise
 Thumbs.db
 desktop.ini
+
+# Raw Natural Earth downloads (regenerate via scripts/extract_hr_counties.py)
+scripts/ne_admin1/
+scripts/ne_populated/
+scripts/*.zip
+scripts/hr_ne_names.json
+

@@ -17,6 +17,10 @@ void i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
+  // Avoid blank screen: no Suspense boundary around App yet.
+  react: {
+    useSuspense: false,
+  },
 })
 
 export function setAppLanguage(language: AppLanguage): void {

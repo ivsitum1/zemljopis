@@ -8,8 +8,8 @@ proprietary (see `LICENSE`). Each entry below retains its own license.
 | Asset | Source | License | Notes |
 | --- | --- | --- | --- |
 | Country / physical basemap data | [Natural Earth](https://www.naturalearthdata.com/) | Public domain | Preferred for country outlines, cities, physical features |
-| Croatian county (županija) boundaries | _TBD — verify before bundling_ | Must allow bundling in a proprietary app; **not GADM** for commercial path | Document exact URL + license before first GeoJSON commit |
-| UI fonts | _TBD_ | Prefer OFL / SIL | Keep OFL notice if OFL fonts are embedded |
+| Croatian county polygons | Natural Earth 10m Admin 1 (`ne_10m_admin_1_states_provinces`), filtered to HR, simplified | Public domain | Bundled as `content/hr/counties.json` and `src/data/geo/counties.json`. Retrieved 2026-08-11. One NE row mislabels Požega-Slavonia; corrected via `name_en` in extract script. |
+| UI fonts | Google Fonts: Fraunces, Source Sans 3 | OFL (SIL) | Loaded via CSS `@import` for now |
 | Flag SVGs (if added) | Wikimedia Commons / PD sources | Verify each file | Some state symbols restrict use |
 
 ## Dependencies

@@ -162,3 +162,82 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.mode-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mode-toolbar .score {
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.prompt {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.feedback {
+  margin: 0;
+  font-weight: 700;
+}
+
+.feedback.ok {
+  color: #1b7a4a;
+}
+
+.feedback.bad {
+  color: #a33b2d;
+}
+
+.map-frame {
+  overflow: hidden;
+  border-radius: 0.85rem;
+  border: 1px solid var(--line);
+  background: #d9e8ef;
+}
+
+.croatia-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: manipulation;
+}
+
+.croatia-map .county {
+  fill: #f4faf7;
+  stroke: #3d5c52;
+  stroke-width: 1.1;
+  cursor: pointer;
+  transition: fill 120ms ease;
+}
+
+.croatia-map .county:hover {
+  fill: #cfe8db;
+}
+
+.croatia-map .county.target,
+.croatia-map .county.correct {
+  fill: #6fbf93;
+}
+
+.croatia-map .county.wrong {
+  fill: #e8a090;
+}
+
+.croatia-map .county-label {
+  fill: #1d2a24;
+  font-size: 9px;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.hint {
+  font-size: 0.92rem;
+}
+

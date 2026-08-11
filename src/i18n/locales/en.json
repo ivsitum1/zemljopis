@@ -56,5 +56,12 @@
     "back": "Back",
     "hr": "Hrvatski",
     "en": "English"
+  },
+  "map": {
+    "findCounty": "Find: {{name}}",
+    "score": "Score: {{correct}}/{{total}}",
+    "correct": "Correct!",
+    "wrong": "That is {{name}}. Try again.",
+    "hint": "Tap a county on the map."
   }
 }

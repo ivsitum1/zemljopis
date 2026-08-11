@@ -56,5 +56,12 @@
     "back": "Natrag",
     "hr": "Hrvatski",
     "en": "English"
+  },
+  "map": {
+    "findCounty": "Pronađi: {{name}}",
+    "score": "Bodovi: {{correct}}/{{total}}",
+    "correct": "Točno!",
+    "wrong": "To je {{name}}. Pokušaj ponovno.",
+    "hint": "Dodirni županiju na karti."
   }
 }

@@ -15,8 +15,13 @@ npm install
 npm run dev
 ```
 
-Otvori adresu koju Vite ispiše (obično `http://localhost:5173`) u Chromeu na
-Android telefonu/tabletu (isti Wi‑Fi), ili na računalu.
+Otvori adresu koju Vite ispiše:
+
+- na računalu: `http://localhost:5173/`
+- na telefonu/tabletu (isti Wi‑Fi): `http://<tvoja-LAN-IP>:5173/`  
+  (Vite ispisuje i **Network** URL kad je `npm run dev` s `--host`)
+
+Ako se na mobitelu ne učitava, Windows firewall možda blokira port 5173 — dopusti Node.js privatnu mrežu.
 
 ## Korisne naredbe
 

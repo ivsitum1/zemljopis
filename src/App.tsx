@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next'
 import { HomeScreen, type AppMode } from './components/HomeScreen'
 import { ModePlaceholder } from './components/ModePlaceholder'
 import { SetupScreen } from './components/SetupScreen'
-import { clearProfile, loadProfile, saveProfile } from './storage/profile'
+import { MapMode } from './modes/map/MapMode'
+import { loadProfile, saveProfile } from './storage/profile'
 import type { UserProfile } from './types/profile'
 import './App.css'
 
@@ -35,18 +36,12 @@ function App() {
     setScreen('home')
   }
 
-  function handleResetProfile(): void {
-    clearProfile()
-    setProfile(null)
-    setScreen('setup')
-  }
-
   return (
     <div className="app-shell">
       <header className="topbar">
         <span className="brand">{t('app.name')}</span>
         {profile && screen !== 'setup' ? (
-          <button type="button" className="ghost compact" onClick={handleResetProfile}>
+          <button type="button" className="ghost compact" onClick={handleEditProfile}>
             {t('setup.changeProfile')}
           </button>
         ) : null}
@@ -65,7 +60,11 @@ function App() {
           />
         ) : null}
 
-        {screen === 'mode' && activeMode ? (
+        {screen === 'mode' && activeMode === 'map' && profile ? (
+          <MapMode level={profile.level} onBack={handleBackHome} />
+        ) : null}
+
+        {screen === 'mode' && activeMode && activeMode !== 'map' ? (
           <ModePlaceholder mode={activeMode} onBack={handleBackHome} />
         ) : null}
       </main>
