@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HomeScreen, type AppMode } from './components/HomeScreen'
+import { OfflineBanner } from './components/OfflineBanner'
 import { SetupScreen } from './components/SetupScreen'
 import { DistanceMode } from './modes/distance/DistanceMode'
 import { MapMode } from './modes/map/MapMode'
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className="app-shell">
+      <OfflineBanner />
       <header className="topbar">
         <span className="brand">{t('app.name')}</span>
         {profile && screen !== 'setup' ? (

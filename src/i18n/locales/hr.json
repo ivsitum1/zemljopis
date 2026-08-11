@@ -118,5 +118,8 @@
     "allTags": "Sve teme",
     "hardList": "Trenutno teško",
     "emptyHard": "Još nema stavki označenih kao teško — vježbaj malo pa će se ovdje pojaviti."
+  },
+  "pwa": {
+    "offline": "Offline način — Hrvatski paket radi bez mreže."
   }
 }

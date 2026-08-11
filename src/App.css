@@ -1,8 +1,18 @@
 .app-shell {
   min-height: 100dvh;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   color: var(--ink);
+}
+
+.offline-banner {
+  padding: 0.55rem 1.25rem;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1a2e24;
+  background: color-mix(in srgb, #c9e265 72%, white);
+  border-bottom: 1px solid var(--line);
 }
 
 .topbar {

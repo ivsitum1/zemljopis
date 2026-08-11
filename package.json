@@ -5,13 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
+    "dev:http": "vite --host --config vite.config.http.ts",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview --host",
+    "preview:https": "vite preview --host",
+    "icons": "python scripts/generate_pwa_icons.py",
     "licenses": "license-checker --summary",
     "test": "vitest run"
   },
   "dependencies": {
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/source-sans-3": "^5.3.0",
     "i18next": "^26.3.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -21,6 +26,7 @@
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
     "@vitejs/plugin-react": "^6.0.4",
     "es-abstract": "^1.23.9",
     "license-checker": "^25.0.1",

@@ -118,5 +118,8 @@
     "allTags": "All topics",
     "hardList": "Currently hard",
     "emptyHard": "Nothing marked hard yet — practise a bit and items will show up here."
+  },
+  "pwa": {
+    "offline": "Offline mode — the Croatia pack works without a network."
   }
 }

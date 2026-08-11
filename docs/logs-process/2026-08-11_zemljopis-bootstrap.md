@@ -57,3 +57,50 @@
 
 - Source and license Croatian županija GeoJSON before map mode.
 - Capacitor Android wrap after MVP offline polish.
+
+---
+
+## Phase 6 follow-up (2026-08-11)
+
+### Objectives
+
+- Local progress store (per profile) with known / learning / hard
+- Curriculum topic tags on answers; filter hard list on home
+- Weighted quiz picking (due → hard → unseen)
+
+### Result
+
+- `src/storage/progress.ts` + tests; `ProgressPanel` on home
+- Modes record answers with GEO-OS tags
+- Build + vitest green after `ProgressStatus` import fix
+
+---
+
+## Phase 7 follow-up (2026-08-11)
+
+### Objectives
+
+- Offline Croatia pack via production service worker
+- Installable Android PWA (manifest PNG icons + HTTPS preview)
+- Device test checklist; offline status banner
+- Self-host fonts (no Google Fonts network dependency)
+
+### Task Breakdown
+
+- [x] Custom `offlineSwPlugin` → `dist/sw.js` precache (no vite-plugin-pwa)
+- [x] `@vitejs/plugin-basic-ssl` for LAN HTTPS
+- [x] Brand favicon + PNG 192/512 icons
+- [x] `@fontsource/*` latin fonts bundled
+- [x] `docs/device-test-checklist.md`
+- [x] README install / offline instructions
+
+### Decisions
+
+- Avoid `vite-plugin-pwa` (previous es-abstract/workbox failure); generate SW in Vite `closeBundle`
+- SW registers only in production builds
+- HTTP config kept as `vite.config.http.ts` / `npm run dev:http` for PC-only work
+
+### Result
+
+- Production build emits `dist/sw.js` with app shell + hashed assets + icons + fonts
+- Manual device verification left to Ivan (checklist)
