@@ -72,5 +72,18 @@
     "wrong": "Not quite — try again.",
     "hint": "Pick one answer.",
     "reveal": "{{code}} = {{city}} ({{county}})"
+  },
+  "places": {
+    "listHint": "Pick a city to read what is nearby and what it is known for.",
+    "quiz": "Quiz",
+    "quizPrompt": "Which city is this about?",
+    "score": "Score: {{correct}}/{{total}}",
+    "correct": "Correct!",
+    "wrong": "The answer is {{name}}.",
+    "basic": "Basics",
+    "advanced": "Advanced",
+    "advancedLocked": "Unlock advanced facts with level 3+.",
+    "stub": "Short note",
+    "stubNote": "Some cities only have a short note for now — we will expand them later."
   }
 }

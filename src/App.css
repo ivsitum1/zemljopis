@@ -300,4 +300,54 @@ main {
   }
 }
 
+.place-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.place-row {
+  text-align: left;
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+}
+
+.place-row span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.place-card-detail h2 {
+  font-family: var(--font-display);
+  margin: 0.15rem 0 0.35rem;
+}
+
+.place-card-detail h3 {
+  margin: 1rem 0 0.35rem;
+  font-size: 1rem;
+}
+
+.place-card-detail ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.place-card-detail li {
+  margin-bottom: 0.35rem;
+}
+
+.fact-quote {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--accent-soft) 45%, #fff);
+  border-radius: 0 0.7rem 0.7rem 0;
+  font-size: 1.05rem;
+}
+
+
 

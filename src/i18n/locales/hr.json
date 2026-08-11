@@ -72,5 +72,18 @@
     "wrong": "Netočno — pokušaj ponovno.",
     "hint": "Odaberi jedan odgovor.",
     "reveal": "{{code}} = {{city}} ({{county}})"
+  },
+  "places": {
+    "listHint": "Odaberi grad i pročitaj što je u okolici i po čemu je poznat.",
+    "quiz": "Kviz",
+    "quizPrompt": "O kojem je gradu riječ?",
+    "score": "Bodovi: {{correct}}/{{total}}",
+    "correct": "Točno!",
+    "wrong": "Točno je: {{name}}.",
+    "basic": "Osnovno",
+    "advanced": "Napredno",
+    "advancedLocked": "Napredne činjenice uključi razinom 3+.",
+    "stub": "Kratki zapis",
+    "stubNote": "Neki gradovi imaju samo kratki zapis — dopunit ćemo ih kasnije."
   }
 }
