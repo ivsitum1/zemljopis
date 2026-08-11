@@ -107,5 +107,16 @@
       "W": "West",
       "NW": "Northwest"
     }
+  },
+  "progress": {
+    "title": "Progress",
+    "known": "Knows",
+    "learning": "Learning",
+    "hard": "Hard",
+    "due": "Due",
+    "filterTag": "Curriculum",
+    "allTags": "All topics",
+    "hardList": "Currently hard",
+    "emptyHard": "Nothing marked hard yet — practise a bit and items will show up here."
   }
 }

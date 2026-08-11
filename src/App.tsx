@@ -63,21 +63,22 @@ function App() {
         ) : null}
 
         {screen === 'mode' && activeMode === 'map' && profile ? (
-          <MapMode level={profile.level} onBack={handleBackHome} />
+          <MapMode level={profile.level} profileName={profile.name} onBack={handleBackHome} />
         ) : null}
 
         {screen === 'mode' && activeMode === 'plates' && profile ? (
-          <PlatesMode level={profile.level} onBack={handleBackHome} />
+          <PlatesMode level={profile.level} profileName={profile.name} onBack={handleBackHome} />
         ) : null}
 
         {screen === 'mode' && activeMode === 'places' && profile ? (
-          <PlacesMode level={profile.level} onBack={handleBackHome} />
+          <PlacesMode level={profile.level} profileName={profile.name} onBack={handleBackHome} />
         ) : null}
 
         {screen === 'mode' && activeMode === 'distance' && profile ? (
           <DistanceMode
             level={profile.level}
             homeCityId={profile.homeCityId}
+            profileName={profile.name}
             onBack={handleBackHome}
           />
         ) : null}

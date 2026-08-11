@@ -107,5 +107,16 @@
       "W": "Zapad",
       "NW": "Sjeverozapad"
     }
+  },
+  "progress": {
+    "title": "Napredak",
+    "known": "Zna",
+    "learning": "Uči",
+    "hard": "Teško",
+    "due": "Za ponavljanje",
+    "filterTag": "Kurikulum",
+    "allTags": "Sve teme",
+    "hardList": "Trenutno teško",
+    "emptyHard": "Još nema stavki označenih kao teško — vježbaj malo pa će se ovdje pojaviti."
   }
 }

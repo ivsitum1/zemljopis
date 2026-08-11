@@ -2,10 +2,12 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCountyById } from '../../data/counties'
 import { curatedPlaces, getPlaceById, PLACES, type PlaceCard } from '../../data/places'
+import { pickWeightedId, recordAnswer } from '../../storage/progress'
 import type { DifficultyLevel } from '../../types/profile'
 
 type PlacesModeProps = {
   level: DifficultyLevel
+  profileName: string
   onBack: () => void
 }
 
@@ -24,7 +26,7 @@ function showAdvanced(level: DifficultyLevel): boolean {
   return level >= 3
 }
 
-export function PlacesMode({ level, onBack }: PlacesModeProps) {
+export function PlacesMode({ level, profileName, onBack }: PlacesModeProps) {
   const { t, i18n } = useTranslation()
   const language = i18n.language.startsWith('en') ? 'en' : 'hr'
   const places = useMemo(() => curatedPlaces(), [])
@@ -33,7 +35,7 @@ export function PlacesMode({ level, onBack }: PlacesModeProps) {
   const [view, setView] = useState<View>('list')
   const [activeId, setActiveId] = useState<string | null>(null)
   const [score, setScore] = useState({ correct: 0, total: 0 })
-  const [quiz, setQuiz] = useState(() => makeQuiz(places, language))
+  const [quiz, setQuiz] = useState(() => makeQuiz(profileName, places))
 
   const active = activeId ? getPlaceById(activeId) : undefined
 
@@ -43,7 +45,7 @@ export function PlacesMode({ level, onBack }: PlacesModeProps) {
   }
 
   function startQuiz(): void {
-    setQuiz(makeQuiz(places, language))
+    setQuiz(makeQuiz(profileName, places))
     setView('quiz')
   }
 
@@ -52,6 +54,13 @@ export function PlacesMode({ level, onBack }: PlacesModeProps) {
       return
     }
     const isCorrect = placeId === quiz.target.id
+    recordAnswer({
+      profileName,
+      mode: 'places',
+      entityId: quiz.target.id,
+      correct: isCorrect,
+      tags: quiz.target.curriculumTags,
+    })
     setScore((prev) => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
       total: prev.total + 1,
@@ -62,7 +71,7 @@ export function PlacesMode({ level, onBack }: PlacesModeProps) {
       pickedId: placeId,
     }))
     window.setTimeout(() => {
-      setQuiz(makeQuiz(places, language, quiz.target.id))
+      setQuiz(makeQuiz(profileName, places, quiz.target.id))
     }, isCorrect ? 900 : 1100)
   }
 
@@ -209,12 +218,15 @@ type QuizState = {
   pickedId: string | null
 }
 
-function makeQuiz(places: PlaceCard[], _language: 'hr' | 'en', excludeId?: string): QuizState {
+function makeQuiz(profileName: string, places: PlaceCard[], excludeId?: string): QuizState {
   const pool = places.filter((place) => place.facts.basic.length > 0)
-  const candidates = pool.filter((place) => place.id !== excludeId)
-  const target = (candidates.length > 0 ? candidates : pool)[
-    Math.floor(Math.random() * (candidates.length > 0 ? candidates.length : pool.length))
-  ]!
+  const id = pickWeightedId(
+    profileName,
+    'places',
+    pool.map((place) => place.id),
+    excludeId,
+  )
+  const target = pool.find((place) => place.id === id) ?? pool[0]!
   const fact = target.facts.basic[Math.floor(Math.random() * target.facts.basic.length)]!
   const others = shuffle(pool.filter((place) => place.id !== target.id)).slice(0, 3)
   return {

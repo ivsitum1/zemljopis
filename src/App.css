@@ -399,6 +399,53 @@ main {
   }
 }
 
+.progress-panel {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.progress-panel h2,
+.progress-panel h3 {
+  margin: 0;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.progress-stats div {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.65rem 0.5rem;
+  border-radius: 0.7rem;
+  background: color-mix(in srgb, var(--accent-soft) 40%, #fff);
+  text-align: center;
+}
+
+.progress-stats strong {
+  font-size: 1.2rem;
+}
+
+.progress-stats span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.compact-field {
+  margin: 0;
+}
+
+.progress-hard-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+
 
 
 

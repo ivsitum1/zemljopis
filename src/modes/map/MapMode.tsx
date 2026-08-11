@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { COUNTIES, getCountyById, type County } from '../../data/counties'
+import { pickWeightedId, recordAnswer } from '../../storage/progress'
 import type { DifficultyLevel } from '../../types/profile'
 import { CroatiaMap } from './CroatiaMap'
 
 type MapModeProps = {
   level: DifficultyLevel
+  profileName: string
   onBack: () => void
 }
 
@@ -13,12 +15,6 @@ type RoundState = {
   target: County
   status: 'asking' | 'correct' | 'wrong'
   wrongId: string | null
-}
-
-function pickTarget(pool: County[], excludeId?: string): County {
-  const candidates = pool.filter((county) => county.id !== excludeId)
-  const list = candidates.length > 0 ? candidates : pool
-  return list[Math.floor(Math.random() * list.length)]!
 }
 
 function poolForLevel(level: DifficultyLevel): County[] {
@@ -33,7 +29,17 @@ function poolForLevel(level: DifficultyLevel): County[] {
   return COUNTIES
 }
 
-export function MapMode({ level, onBack }: MapModeProps) {
+function pickTarget(profileName: string, pool: County[], excludeId?: string): County {
+  const id = pickWeightedId(
+    profileName,
+    'map',
+    pool.map((county) => county.id),
+    excludeId,
+  )
+  return pool.find((county) => county.id === id) ?? pool[0]!
+}
+
+export function MapMode({ level, profileName, onBack }: MapModeProps) {
   const { t, i18n } = useTranslation()
   const language = i18n.language.startsWith('en') ? 'en' : 'hr'
   const pool = useMemo(() => poolForLevel(level), [level])
@@ -41,14 +47,14 @@ export function MapMode({ level, onBack }: MapModeProps) {
 
   const [score, setScore] = useState({ correct: 0, total: 0 })
   const [round, setRound] = useState<RoundState>(() => ({
-    target: pickTarget(pool),
+    target: pickTarget(profileName, pool),
     status: 'asking',
     wrongId: null,
   }))
 
   function nextRound(previousId?: string): void {
     setRound({
-      target: pickTarget(pool, previousId),
+      target: pickTarget(profileName, pool, previousId),
       status: 'asking',
       wrongId: null,
     })
@@ -60,6 +66,13 @@ export function MapMode({ level, onBack }: MapModeProps) {
     }
 
     const isCorrect = countyId === round.target.id
+    recordAnswer({
+      profileName,
+      mode: 'map',
+      entityId: round.target.id,
+      correct: isCorrect,
+      tags: [...round.target.curriculumTags, 'GEO-OS-B.5.2'],
+    })
     setScore((prev) => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
       total: prev.total + 1,
@@ -92,13 +105,9 @@ export function MapMode({ level, onBack }: MapModeProps) {
       </div>
 
       <h1>{t('modes.map.title')}</h1>
-      <p className="prompt">
-        {t('map.findCounty', { name: targetName })}
-      </p>
+      <p className="prompt">{t('map.findCounty', { name: targetName })}</p>
 
-      {round.status === 'correct' ? (
-        <p className="feedback ok">{t('map.correct')}</p>
-      ) : null}
+      {round.status === 'correct' ? <p className="feedback ok">{t('map.correct')}</p> : null}
       {round.status === 'wrong' && wrongCounty ? (
         <p className="feedback bad">
           {t('map.wrong', { name: wrongCounty.name[language] })}

@@ -2,10 +2,12 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCountyById } from '../../data/counties'
 import { PLATES, type PlateEntry } from '../../data/plates'
+import { pickWeightedId, recordAnswer } from '../../storage/progress'
 import type { DifficultyLevel } from '../../types/profile'
 
 type PlatesModeProps = {
   level: DifficultyLevel
+  profileName: string
   onBack: () => void
 }
 
@@ -20,10 +22,14 @@ function shuffle<T>(items: T[]): T[] {
   return copy
 }
 
-function pickPlate(pool: PlateEntry[], exclude?: string): PlateEntry {
-  const candidates = pool.filter((plate) => plate.code !== exclude)
-  const list = candidates.length > 0 ? candidates : pool
-  return list[Math.floor(Math.random() * list.length)]!
+function pickPlate(profileName: string, pool: PlateEntry[], exclude?: string): PlateEntry {
+  const id = pickWeightedId(
+    profileName,
+    'plates',
+    pool.map((plate) => plate.code),
+    exclude,
+  )
+  return pool.find((plate) => plate.code === id) ?? pool[0]!
 }
 
 function poolForLevel(level: DifficultyLevel): PlateEntry[] {
@@ -42,7 +48,7 @@ function choiceCount(level: DifficultyLevel): number {
   return 6
 }
 
-export function PlatesMode({ level, onBack }: PlatesModeProps) {
+export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
   const { t, i18n } = useTranslation()
   const language = i18n.language.startsWith('en') ? 'en' : 'hr'
   const pool = useMemo(() => poolForLevel(level), [level])
@@ -50,13 +56,15 @@ export function PlatesMode({ level, onBack }: PlatesModeProps) {
 
   const [direction, setDirection] = useState<Direction>('codeToPlace')
   const [score, setScore] = useState({ correct: 0, total: 0 })
-  const [target, setTarget] = useState<PlateEntry>(() => pickPlate(pool))
-  const [choices, setChoices] = useState<PlateEntry[]>(() => buildChoices(pool, pickPlate(pool), nChoices))
+  const [target, setTarget] = useState<PlateEntry>(() => pickPlate(profileName, pool))
+  const [choices, setChoices] = useState<PlateEntry[]>(() =>
+    buildChoices(pool, pickPlate(profileName, pool), nChoices),
+  )
   const [status, setStatus] = useState<'asking' | 'correct' | 'wrong'>('asking')
   const [picked, setPicked] = useState<string | null>(null)
 
   function startRound(nextDirection: Direction = direction, exclude?: string): void {
-    const nextTarget = pickPlate(pool, exclude)
+    const nextTarget = pickPlate(profileName, pool, exclude)
     setTarget(nextTarget)
     setChoices(buildChoices(pool, nextTarget, nChoices))
     setStatus('asking')
@@ -70,6 +78,13 @@ export function PlatesMode({ level, onBack }: PlatesModeProps) {
     }
 
     const isCorrect = code === target.code
+    recordAnswer({
+      profileName,
+      mode: 'plates',
+      entityId: target.code,
+      correct: isCorrect,
+      tags: ['GEO-OS-A.5.4'],
+    })
     setPicked(code)
     setScore((prev) => ({
       correct: prev.correct + (isCorrect ? 1 : 0),

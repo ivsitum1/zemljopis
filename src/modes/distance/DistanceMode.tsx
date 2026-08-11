@@ -14,10 +14,12 @@ import {
   type DistanceBand,
 } from '../../geo/distance'
 import type { DifficultyLevel } from '../../types/profile'
+import { pickWeightedId, recordAnswer } from '../../storage/progress'
 
 type DistanceModeProps = {
   level: DifficultyLevel
   homeCityId: string
+  profileName: string
   onBack: () => void
 }
 
@@ -58,24 +60,34 @@ function shuffle<T>(items: T[]): T[] {
   return copy
 }
 
-function pickPlace(pool: PlaceCard[], excludeIds: string[] = []): PlaceCard {
+function pickPlace(
+  profileName: string,
+  pool: PlaceCard[],
+  excludeIds: string[] = [],
+): PlaceCard {
   const candidates = pool.filter((place) => !excludeIds.includes(place.id))
   const list = candidates.length > 0 ? candidates : pool
-  return list[Math.floor(Math.random() * list.length)]!
+  const id = pickWeightedId(
+    profileName,
+    'distance',
+    list.map((place) => place.id),
+  )
+  return list.find((place) => place.id === id) ?? list[0]!
 }
 
 function makeRound(
   level: DifficultyLevel,
   home: { lat: number; lon: number; id: string },
   pool: PlaceCard[],
+  profileName: string,
   previousTargetId?: string,
 ): Round {
   const bands = distanceBandsForLevel(level)
   const roll = Math.random()
 
   if (level >= 4 && roll > 0.66) {
-    const a = pickPlace(pool, [home.id, previousTargetId ?? ''])
-    const b = pickPlace(pool, [home.id, a.id])
+    const a = pickPlace(profileName, pool, [home.id, previousTargetId ?? ''])
+    const b = pickPlace(profileName, pool, [home.id, a.id])
     const kmA = haversineKm(home.lat, home.lon, a.lat, a.lon)
     const kmB = haversineKm(home.lat, home.lon, b.lat, b.lon)
     return {
@@ -88,7 +100,7 @@ function makeRound(
     }
   }
 
-  const target = pickPlace(pool, [home.id, previousTargetId ?? ''])
+  const target = pickPlace(profileName, pool, [home.id, previousTargetId ?? ''])
   const km = haversineKm(home.lat, home.lon, target.lat, target.lon)
   const bearing = bearingDegrees(home.lat, home.lon, target.lat, target.lon)
 
@@ -118,7 +130,7 @@ function makeRound(
   }
 }
 
-export function DistanceMode({ level, homeCityId, onBack }: DistanceModeProps) {
+export function DistanceMode({ level, homeCityId, profileName, onBack }: DistanceModeProps) {
   const { t, i18n } = useTranslation()
   const language = i18n.language.startsWith('en') ? 'en' : 'hr'
   const homeCity = getCityById(homeCityId)
@@ -129,17 +141,24 @@ export function DistanceMode({ level, homeCityId, onBack }: DistanceModeProps) {
     : { id: 'zagreb', lat: 45.815, lon: 15.982, name: { hr: 'Zagreb', en: 'Zagreb' } }
 
   const [score, setScore] = useState({ correct: 0, total: 0 })
-  const [round, setRound] = useState<Round>(() => makeRound(level, home, pool))
+  const [round, setRound] = useState<Round>(() => makeRound(level, home, pool, profileName))
   const [status, setStatus] = useState<AnswerState>('asking')
   const [picked, setPicked] = useState<string | null>(null)
 
   function nextRound(excludeId?: string): void {
-    setRound(makeRound(level, home, pool, excludeId))
+    setRound(makeRound(level, home, pool, profileName, excludeId))
     setStatus('asking')
     setPicked(null)
   }
 
-  function resolve(isCorrect: boolean, pickId: string, excludeAfter?: string): void {
+  function resolve(isCorrect: boolean, pickId: string, entityId: string, excludeAfter?: string): void {
+    recordAnswer({
+      profileName,
+      mode: 'distance',
+      entityId,
+      correct: isCorrect,
+      tags: ['GEO-OS-B.5.3', 'GEO-OS-B.5.2'],
+    })
     setPicked(pickId)
     setScore((prev) => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
@@ -211,7 +230,12 @@ export function DistanceMode({ level, homeCityId, onBack }: DistanceModeProps) {
                   className={className}
                   disabled={status === 'correct'}
                   onClick={() =>
-                    resolve(band.id === round.correctBand.id, band.id, round.target.id)
+                    resolve(
+                      band.id === round.correctBand.id,
+                      band.id,
+                      round.target.id,
+                      round.target.id,
+                    )
                   }
                 >
                   <strong>{band.label[language]}</strong>
@@ -245,7 +269,7 @@ export function DistanceMode({ level, homeCityId, onBack }: DistanceModeProps) {
                   type="button"
                   className={className}
                   disabled={status === 'correct'}
-                  onClick={() => resolve(dir === round.correct, dir, round.target.id)}
+                  onClick={() => resolve(dir === round.correct, dir, round.target.id, round.target.id)}
                 >
                   <strong>{t(`distance.dirs.${dir}`)}</strong>
                 </button>
@@ -280,7 +304,9 @@ export function DistanceMode({ level, homeCityId, onBack }: DistanceModeProps) {
                   type="button"
                   className={className}
                   disabled={status === 'correct'}
-                  onClick={() => resolve(place.id === round.closerId, place.id, place.id)}
+                  onClick={() =>
+                    resolve(place.id === round.closerId, place.id, round.closerId, round.closerId)
+                  }
                 >
                   <strong>{place.name[language]}</strong>
                 </button>

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { getCityById } from '../data/cities'
 import type { UserProfile } from '../types/profile'
+import { ProgressPanel } from './ProgressPanel'
 
 export type AppMode = 'map' | 'plates' | 'places' | 'distance'
 
@@ -48,6 +49,8 @@ export function HomeScreen({ profile, onOpenMode, onEditProfile }: HomeScreenPro
           </button>
         ))}
       </div>
+
+      <ProgressPanel profileName={profile.name} />
     </section>
   )
 }
