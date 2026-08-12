@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HomeScreen, type AppMode } from './components/HomeScreen'
+import { Logo } from './components/Logo'
 import { SetupScreen } from './components/SetupScreen'
 import { DistanceMode } from './modes/distance/DistanceMode'
 import { MapMode } from './modes/map/MapMode'
@@ -41,7 +42,9 @@ function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <span className="brand">{t('app.name')}</span>
+        <span className="brand">
+          <Logo variant="lockup" size={26} title={t('app.name')} />
+        </span>
         {profile && screen !== 'setup' ? (
           <button type="button" className="ghost compact" onClick={handleEditProfile}>
             {t('setup.changeProfile')}
