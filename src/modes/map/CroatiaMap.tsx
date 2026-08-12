@@ -72,18 +72,35 @@ export function CroatiaMap({
         if (isWrong) className += ' wrong'
         if (isSelected) className += ' selected'
 
+        const label = county ? county.name[language] : path.id
+
+        function choose(): void {
+          if (!disabled) {
+            onSelect(path.id)
+          }
+        }
+
+        // A bare <path onClick> is unreachable without a pointer, which left
+        // the whole map mode unusable by keyboard. Giving each county a role
+        // and a tab stop makes it behave like the button it already was.
         return (
           <path
             key={path.id}
             d={path.d}
             className={className}
-            onClick={() => {
-              if (!disabled) {
-                onSelect(path.id)
+            role="button"
+            aria-label={label}
+            aria-disabled={disabled || undefined}
+            tabIndex={disabled ? -1 : 0}
+            onClick={choose}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault()
+                choose()
               }
             }}
           >
-            <title>{county ? county.name[language] : path.id}</title>
+            <title>{label}</title>
           </path>
         )
       })}

@@ -8,12 +8,11 @@ export type AppMode = 'map' | 'plates' | 'places' | 'distance'
 type HomeScreenProps = {
   profile: UserProfile
   onOpenMode: (mode: AppMode) => void
-  onEditProfile: () => void
 }
 
 const MODES: AppMode[] = ['map', 'plates', 'places', 'distance']
 
-export function HomeScreen({ profile, onOpenMode, onEditProfile }: HomeScreenProps) {
+export function HomeScreen({ profile, onOpenMode }: HomeScreenProps) {
   const { t, i18n } = useTranslation()
   const city = getCityById(profile.homeCityId)
   const cityName = city
@@ -22,17 +21,15 @@ export function HomeScreen({ profile, onOpenMode, onEditProfile }: HomeScreenPro
 
   return (
     <section className="panel home">
+      {/* The topbar already carries "change profile" on every screen; a second
+          copy here was harmless while both were small, but at a 44px tap
+          target the duplication is loud. One control, one place. */}
       <header className="home-header">
-        <div>
-          <p className="eyebrow">{t('app.name')}</p>
-          <h1>{t('home.welcome', { name: profile.name })}</h1>
-          <p className="muted">
-            {t('home.from', { city: cityName })} · {t(`levels.${profile.level}`)}
-          </p>
-        </div>
-        <button type="button" className="ghost" onClick={onEditProfile}>
-          {t('setup.changeProfile')}
-        </button>
+        <p className="eyebrow">{t('app.name')}</p>
+        <h1>{t('home.welcome', { name: profile.name })}</h1>
+        <p className="muted">
+          {t('home.from', { city: cityName })} · {t(`levels.${profile.level}`)}
+        </p>
       </header>
 
       <h2>{t('home.chooseMode')}</h2>

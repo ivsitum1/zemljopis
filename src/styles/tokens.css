@@ -130,6 +130,13 @@
   --route-home: var(--c-sea-500);
   --route-target: var(--c-clay-500);
 
+  /* ---------- real-world constants ---------- */
+  /* The EU registration-plate band. Deliberately NOT remapped for dark mode
+     and not part of the brand palette: a plate is blue and yellow in the
+     world, and the whole point of the badge is that it looks like one. */
+  --plate-eu-blue: #0b3ea8;
+  --plate-eu-yellow: #ffd84d;
+
   color-scheme: light dark;
 }
 

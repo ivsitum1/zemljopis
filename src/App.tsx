@@ -58,11 +58,7 @@ function App() {
         ) : null}
 
         {screen === 'home' && profile ? (
-          <HomeScreen
-            profile={profile}
-            onOpenMode={handleOpenMode}
-            onEditProfile={handleEditProfile}
-          />
+          <HomeScreen profile={profile} onOpenMode={handleOpenMode} />
         ) : null}
 
         {screen === 'mode' && activeMode === 'map' && profile ? (
