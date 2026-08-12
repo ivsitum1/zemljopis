@@ -7,6 +7,7 @@
     "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "icons": "node scripts/gen-icons.mjs",
     "preview": "vite preview --host",
     "licenses": "license-checker --summary",
     "test": "vitest run"
@@ -27,6 +28,7 @@
     "es-abstract": "^1.23.9",
     "license-checker": "^25.0.1",
     "oxlint": "^1.75.0",
+    "sharp": "^0.35.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
     "vitest": "^4.1.10"

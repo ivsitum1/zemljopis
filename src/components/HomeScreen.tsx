@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { getCityById } from '../data/cities'
 import type { UserProfile } from '../types/profile'
+import { ModeIcon } from './ModeIcon'
 
 export type AppMode = 'map' | 'plates' | 'places' | 'distance'
 
@@ -43,8 +44,11 @@ export function HomeScreen({ profile, onOpenMode, onEditProfile }: HomeScreenPro
             className="mode-card"
             onClick={() => onOpenMode(mode)}
           >
-            <strong>{t(`modes.${mode}.title`)}</strong>
-            <span>{t(`modes.${mode}.desc`)}</span>
+            <ModeIcon mode={mode} />
+            <span className="mode-card-text">
+              <strong>{t(`modes.${mode}.title`)}</strong>
+              <span>{t(`modes.${mode}.desc`)}</span>
+            </span>
           </button>
         ))}
       </div>

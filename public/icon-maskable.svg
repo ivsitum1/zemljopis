@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Obzor">
+  <!-- Maskable source. Android may crop this to a circle, so the mark is kept
+       inside the centred 80% safe zone and the background runs full bleed. -->
+  <rect width="512" height="512" fill="#0B6875"/>
+  <g transform="translate(256 268) scale(6.4) translate(-24 -24)">
+    <path d="M24 4 L27 15 L38 18 L27 21 L24 32 L21 21 L10 18 L21 15 Z" fill="#F5A97F"/>
+    <path d="M5 37 Q24 27 43 37" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M5 43.5 Q24 34.5 43 43.5" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+  </g>
+</svg>
