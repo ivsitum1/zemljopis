@@ -112,7 +112,7 @@ export function PlatesMode({ level, onBack }: PlatesModeProps) {
 
       {direction === 'codeToPlace' ? (
         <div className="plate-badge" aria-hidden>
-          {target.code}
+          <span className="plate-code-value">{target.code}</span>
         </div>
       ) : null}
 
