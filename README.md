@@ -1,7 +1,10 @@
-# Zemljopis
+# Obzor
 
 Edukativna PWA za vježbanje zemljopisa (karte, tablice, mjesta, udaljenosti).
 Prvo Hrvatska (offline), zatim Europa i svijet. Kod je proprietary — vidi `LICENSE`.
+
+Aplikacija se do kolovoza 2026. zvala **Zemljopis**. Vizualni identitet i
+smjernice: `docs/brand/`.
 
 ## Zahtjevi
 
@@ -30,6 +33,8 @@ npm run build      # produkcijski build
 npm run preview    # pregled builda
 npm run licenses   # pregled licenci ovisnosti
 npm run lint       # oxlint
+npm run test       # vitest
+npm run icons      # regeneriraj PWA ikone iz public/icon-maskable.svg
 ```
 
 ## Licenca i aseti

@@ -1,5 +1,5 @@
 {
-  "name": "zemljopis",
+  "name": "obzor",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -26,6 +26,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "es-abstract": "^1.23.9",
+    "happy-dom": "^20.11.2",
     "license-checker": "^25.0.1",
     "oxlint": "^1.75.0",
     "sharp": "^0.35.3",

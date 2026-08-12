@@ -1,5 +1,6 @@
 import {
   DIFFICULTY_LEVELS,
+  LEGACY_PROFILE_STORAGE_KEY,
   PROFILE_STORAGE_KEY,
   type DifficultyLevel,
   type UserProfile,
@@ -11,7 +12,18 @@ function isDifficultyLevel(value: unknown): value is DifficultyLevel {
 
 export function loadProfile(): UserProfile | null {
   try {
-    const raw = localStorage.getItem(PROFILE_STORAGE_KEY)
+    // The rebrand renamed the storage namespace. Anyone who used the app
+    // before it would otherwise land back on the setup screen and lose their
+    // home city and level, so the old key is read once and moved across. The
+    // value still goes through the validation below, because a key written by
+    // an older build is no more trustworthy than any other stored input.
+    let raw = localStorage.getItem(PROFILE_STORAGE_KEY)
+    let migrated = false
+    if (!raw) {
+      raw = localStorage.getItem(LEGACY_PROFILE_STORAGE_KEY)
+      migrated = raw !== null
+    }
+
     if (!raw) {
       return null
     }
@@ -37,11 +49,20 @@ export function loadProfile(): UserProfile | null {
       return null
     }
 
-    return {
+    const profile: UserProfile = {
       name: candidate.name.trim(),
       homeCityId: candidate.homeCityId,
       level: candidate.level,
     }
+
+    // Only rewrite once the value has proven valid, so a corrupt legacy entry
+    // is dropped rather than copied into the new key.
+    if (migrated) {
+      saveProfile(profile)
+      localStorage.removeItem(LEGACY_PROFILE_STORAGE_KEY)
+    }
+
+    return profile
   } catch {
     return null
   }
@@ -53,4 +74,5 @@ export function saveProfile(profile: UserProfile): void {
 
 export function clearProfile(): void {
   localStorage.removeItem(PROFILE_STORAGE_KEY)
+  localStorage.removeItem(LEGACY_PROFILE_STORAGE_KEY)
 }
