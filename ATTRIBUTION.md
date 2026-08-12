@@ -1,6 +1,6 @@
 # Attribution
 
-Third-party data and assets used in Zemljopis. Application source code is
+Third-party data and assets used in Obzor. Application source code is
 proprietary (see `LICENSE`). Each entry below retains its own license.
 
 ## Planned / in use
