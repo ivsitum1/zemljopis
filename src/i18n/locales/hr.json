@@ -84,7 +84,8 @@
     "advanced": "Napredno",
     "advancedLocked": "Napredne činjenice uključi razinom 3+.",
     "stub": "Kratki zapis",
-    "stubNote": "Neki gradovi imaju samo kratki zapis — dopunit ćemo ih kasnije."
+    "stubNote": "Neki gradovi imaju samo kratki zapis — dopunit ćemo ih kasnije.",
+    "mapAria": "Karta: {{place}}"
   },
   "distance": {
     "fromHome": "Od doma: {{city}}",
@@ -97,6 +98,18 @@
     "revealKm": "Točno! Zračna udaljenost je oko {{km}} km.",
     "revealDirection": "Točno! Smjer: {{dir}} (oko {{km}} km).",
     "revealCloser": "{{a}} ≈ {{kmA}} km, {{b}} ≈ {{kmB}} km.",
+    "mapAria": "Karta Hrvatske s domom i ciljem",
+    "compassAria": "Kompas",
+    "dirsShort": {
+      "N": "S",
+      "NE": "SI",
+      "E": "I",
+      "SE": "JI",
+      "S": "J",
+      "SW": "JZ",
+      "W": "Z",
+      "NW": "SZ"
+    },
     "dirs": {
       "N": "Sjever",
       "NE": "Sjeveroistok",

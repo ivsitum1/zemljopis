@@ -84,7 +84,8 @@
     "advanced": "Advanced",
     "advancedLocked": "Unlock advanced facts with level 3+.",
     "stub": "Short note",
-    "stubNote": "Some cities only have a short note for now — we will expand them later."
+    "stubNote": "Some cities only have a short note for now — we will expand them later.",
+    "mapAria": "Map: {{place}}"
   },
   "distance": {
     "fromHome": "From home: {{city}}",
@@ -97,6 +98,18 @@
     "revealKm": "Correct! Straight-line distance is about {{km}} km.",
     "revealDirection": "Correct! Direction: {{dir}} (about {{km}} km).",
     "revealCloser": "{{a}} ≈ {{kmA}} km, {{b}} ≈ {{kmB}} km.",
+    "mapAria": "Map of Croatia with home and target",
+    "compassAria": "Compass",
+    "dirsShort": {
+      "N": "N",
+      "NE": "NE",
+      "E": "E",
+      "SE": "SE",
+      "S": "S",
+      "SW": "SW",
+      "W": "W",
+      "NW": "NW"
+    },
     "dirs": {
       "N": "North",
       "NE": "Northeast",

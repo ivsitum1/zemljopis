@@ -4,6 +4,7 @@ import { getCountyById } from '../../data/counties'
 import { curatedPlaces, getPlaceById, PLACES, type PlaceCard } from '../../data/places'
 import { pickWeightedId, recordAnswer } from '../../storage/progress'
 import type { DifficultyLevel } from '../../types/profile'
+import { PlaceLocationMap } from './PlaceLocationMap'
 
 type PlacesModeProps = {
   level: DifficultyLevel
@@ -184,6 +185,13 @@ function PlaceDetail({
         {county ? county.name[language] : place.countyId}
         {!place.curated ? ` · ${t('places.stub')}` : null}
       </p>
+
+      <PlaceLocationMap
+        lat={place.lat}
+        lon={place.lon}
+        countyId={place.countyId}
+        ariaLabel={t('places.mapAria', { place: place.name[language] })}
+      />
 
       <h3>{t('places.basic')}</h3>
       <ul>

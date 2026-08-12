@@ -5,16 +5,17 @@ import { curatedPlaces, type PlaceCard } from '../../data/places'
 import {
   bandForDistance,
   bearingDegrees,
+  directionChoices4,
   distanceBandsForLevel,
   haversineKm,
-  toCompass4,
   toCompass8,
-  type Compass4,
   type Compass8,
   type DistanceBand,
 } from '../../geo/distance'
 import type { DifficultyLevel } from '../../types/profile'
 import { pickWeightedId, recordAnswer } from '../../storage/progress'
+import { CompassRose } from './CompassRose'
+import { CroatiaDistanceMap } from './CroatiaDistanceMap'
 
 type DistanceModeProps = {
   level: DifficultyLevel
@@ -36,9 +37,8 @@ type Round =
       target: PlaceCard
       km: number
       bearing: number
-      correct: Compass4 | Compass8
-      options: Array<Compass4 | Compass8>
-      use8: boolean
+      correct: Compass8
+      options: Compass8[]
     }
   | {
       kind: 'closer'
@@ -50,15 +50,6 @@ type Round =
     }
 
 type AnswerState = 'asking' | 'correct' | 'wrong'
-
-function shuffle<T>(items: T[]): T[] {
-  const copy = [...items]
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[copy[i], copy[j]] = [copy[j]!, copy[i]!]
-  }
-  return copy
-}
 
 function pickPlace(
   profileName: string,
@@ -105,19 +96,14 @@ function makeRound(
   const bearing = bearingDegrees(home.lat, home.lon, target.lat, target.lon)
 
   if (level >= 2 && roll > 0.45) {
-    const use8 = level >= 4
-    const correct = use8 ? toCompass8(bearing) : toCompass4(bearing)
-    const all = use8
-      ? (['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'] as Compass8[])
-      : (['N', 'E', 'S', 'W'] as Compass4[])
+    const correct = toCompass8(bearing)
     return {
       kind: 'direction',
       target,
       km,
       bearing,
       correct,
-      options: shuffle(all),
-      use8,
+      options: directionChoices4(correct),
     }
   }
 
@@ -179,6 +165,21 @@ export function DistanceMode({ level, homeCityId, profileName, onBack }: Distanc
     round.kind === 'closer' ? null : round.target.name[language]
   const homeName = home.name[language]
 
+  const mapHome = { lat: home.lat, lon: home.lon, role: 'home' as const }
+  const mapTarget =
+    round.kind === 'closer'
+      ? { lat: round.a.lat, lon: round.a.lon, role: 'target' as const }
+      : { lat: round.target.lat, lon: round.target.lon, role: 'target' as const }
+  const mapSecondary =
+    round.kind === 'closer'
+      ? { lat: round.b.lat, lon: round.b.lon, role: 'secondary' as const }
+      : undefined
+
+  const directionHighlight =
+    round.kind === 'direction' && status === 'correct' ? round.correct : null
+  const directionBearing =
+    round.kind === 'direction' && status === 'correct' ? round.bearing : null
+
   return (
     <section className="panel mode-panel">
       <div className="mode-toolbar">
@@ -192,22 +193,25 @@ export function DistanceMode({ level, homeCityId, profileName, onBack }: Distanc
       <p className="muted">{t('distance.fromHome', { city: homeName })}</p>
       <p className="muted hint">{t('distance.airNote')}</p>
 
-      {round.kind !== 'closer' ? (
-        <MiniRoute
-          homeLabel={homeName}
-          targetLabel={round.target.name[language]}
-          home={{ lat: home.lat, lon: home.lon }}
-          target={{ lat: round.target.lat, lon: round.target.lon }}
+      <div className="distance-viz">
+        <CroatiaDistanceMap
+          home={mapHome}
+          target={mapTarget}
+          secondary={mapSecondary}
+          ariaLabel={t('distance.mapAria')}
         />
-      ) : (
-        <MiniRoute
-          homeLabel={homeName}
-          targetLabel={`${round.a.name[language]} / ${round.b.name[language]}`}
-          home={{ lat: home.lat, lon: home.lon }}
-          target={{ lat: round.a.lat, lon: round.a.lon }}
-          secondary={{ lat: round.b.lat, lon: round.b.lon }}
+        <CompassRose
+          emphasized={round.kind === 'direction'}
+          highlight={directionHighlight}
+          bearingDegrees={directionBearing}
+          ariaLabel={t('distance.compassAria')}
         />
-      )}
+      </div>
+      <p className="muted hint">
+        {round.kind === 'closer'
+          ? `${homeName} → ${round.a.name[language]} / ${round.b.name[language]}`
+          : `${homeName} → ${targetName}`}
+      </p>
 
       {round.kind === 'distance' ? (
         <>
@@ -316,51 +320,5 @@ export function DistanceMode({ level, homeCityId, profileName, onBack }: Distanc
         </>
       ) : null}
     </section>
-  )
-}
-
-function MiniRoute({
-  homeLabel,
-  targetLabel,
-  home,
-  target,
-  secondary,
-}: {
-  homeLabel: string
-  targetLabel: string
-  home: { lat: number; lon: number }
-  target: { lat: number; lon: number }
-  secondary?: { lat: number; lon: number }
-}) {
-  const points = [home, target, ...(secondary ? [secondary] : [])]
-  const lons = points.map((p) => p.lon)
-  const lats = points.map((p) => p.lat)
-  const minLon = Math.min(...lons) - 0.4
-  const maxLon = Math.max(...lons) + 0.4
-  const minLat = Math.min(...lats) - 0.3
-  const maxLat = Math.max(...lats) + 0.3
-  const w = 320
-  const h = 160
-  const project = (lat: number, lon: number) => ({
-    x: ((lon - minLon) / (maxLon - minLon)) * (w - 24) + 12,
-    y: ((maxLat - lat) / (maxLat - minLat)) * (h - 24) + 12,
-  })
-  const hPt = project(home.lat, home.lon)
-  const tPt = project(target.lat, target.lon)
-  const sPt = secondary ? project(secondary.lat, secondary.lon) : null
-
-  return (
-    <div className="mini-route">
-      <svg viewBox={`0 0 ${w} ${h}`} className="mini-route-svg" aria-hidden>
-        <line x1={hPt.x} y1={hPt.y} x2={tPt.x} y2={tPt.y} className="route-line" />
-        {sPt ? <line x1={hPt.x} y1={hPt.y} x2={sPt.x} y2={sPt.y} className="route-line secondary" /> : null}
-        <circle cx={hPt.x} cy={hPt.y} r={6} className="route-home" />
-        <circle cx={tPt.x} cy={tPt.y} r={6} className="route-target" />
-        {sPt ? <circle cx={sPt.x} cy={sPt.y} r={6} className="route-target secondary" /> : null}
-      </svg>
-      <p className="muted hint">
-        {homeLabel} → {targetLabel}
-      </p>
-    </div>
   )
 }

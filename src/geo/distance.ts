@@ -1,6 +1,16 @@
 const EARTH_RADIUS_KM = 6371
 
 export type Compass8 = 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW'
+export const COMPASS8_ALL: readonly Compass8[] = [
+  'N',
+  'NE',
+  'E',
+  'SE',
+  'S',
+  'SW',
+  'W',
+  'NW',
+]
 export type Compass4 = 'N' | 'E' | 'S' | 'W'
 
 export function haversineKm(
@@ -36,9 +46,23 @@ export function bearingDegrees(
 }
 
 export function toCompass8(bearing: number): Compass8 {
-  const directions: Compass8[] = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
   const index = Math.round(bearing / 45) % 8
-  return directions[index]!
+  return COMPASS8_ALL[index]!
+}
+
+/**
+ * Four direction choices for a quiz: correct, both neighbours, and opposite.
+ * Returned in clockwise compass order (N → NW), not shuffled.
+ */
+export function directionChoices4(correct: Compass8): Compass8[] {
+  const index = COMPASS8_ALL.indexOf(correct)
+  const picked = new Set<Compass8>([
+    correct,
+    COMPASS8_ALL[(index + 7) % 8]!,
+    COMPASS8_ALL[(index + 1) % 8]!,
+    COMPASS8_ALL[(index + 4) % 8]!,
+  ])
+  return COMPASS8_ALL.filter((dir) => picked.has(dir))
 }
 
 export function toCompass4(bearing: number): Compass4 {
