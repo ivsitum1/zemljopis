@@ -9,7 +9,8 @@ proprietary (see `LICENSE`). Each entry below retains its own license.
 | --- | --- | --- | --- |
 | Country / physical basemap data | [Natural Earth](https://www.naturalearthdata.com/) | Public domain | Preferred for country outlines, cities, physical features |
 | Croatian county polygons | Natural Earth 10m Admin 1 (`ne_10m_admin_1_states_provinces`), filtered to HR, simplified | Public domain | Bundled as `content/hr/counties.json` and `src/data/geo/counties.json`. Retrieved 2026-08-11. One NE row mislabels Požega-Slavonia; corrected via `name_en` in extract script. |
-| UI fonts | Google Fonts: Fraunces, Source Sans 3 | OFL (SIL) | Loaded via CSS `@import` for now |
+| UI display font | [Bricolage Grotesque](https://github.com/ateliertriay/bricolage) | OFL 1.1 (SIL) | Bundled via `@fontsource-variable/bricolage-grotesque`, wght axis. Self-hosted so the app works offline. |
+| UI body font | [Public Sans](https://github.com/uswds/public-sans) | OFL 1.1 (SIL) | Bundled via `@fontsource-variable/public-sans`, wght axis. Self-hosted so the app works offline. |
 | Flag SVGs (if added) | Wikimedia Commons / PD sources | Verify each file | Some state symbols restrict use |
 
 ## Dependencies
