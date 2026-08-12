@@ -1,0 +1,226 @@
+/*
+ * Obzor design tokens — visual direction "Jadran".
+ *
+ * Two layers on purpose:
+ *   --c-*   raw palette. Private. Never referenced by a component.
+ *   others  semantic. This is all a component is allowed to see.
+ *
+ * Switching visual direction means rewriting the palette and the semantic
+ * mapping in this file only. Contrast ratios in the comments are measured
+ * (WCAG 2.1 relative luminance), not estimated — see docs/brand/tokens.md.
+ */
+
+:root {
+  /* ---------- palette (private) ---------- */
+  --c-sea-900: #071619;
+  --c-sea-800: #0e242a;
+  --c-sea-700: #0e2a32;
+  --c-sea-600: #07444e;
+  --c-sea-500: #0b6875;
+  --c-sea-400: #48bcc9;
+  --c-sea-300: #7fd6df;
+  --c-sea-200: #c6dadc;
+  --c-sea-100: #dce8e7;
+  --c-sea-050: #ecf2f2;
+
+  --c-stone-600: #4a6970;
+  --c-stone-500: #75908f;
+  --c-stone-400: #8daaaf;
+  --c-stone-300: #cfdedf;
+  --c-stone-100: #dbe9ea;
+
+  --c-clay-600: #a93526;
+  --c-clay-500: #bc5527;
+  --c-clay-400: #d08163;
+  --c-clay-300: #f0885a;
+
+  --c-sun-600: #7a6015;
+  --c-sun-500: #d9a21b;
+
+  --c-moss-600: #15704e;
+  --c-moss-500: #3e9e77;
+  --c-moss-400: #4fc291;
+
+  /* ---------- typography ---------- */
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Public Sans Variable', 'Public Sans', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, monospace;
+
+  --text-xs: 0.78rem;
+  --text-sm: 0.88rem;
+  --text-md: 1rem;
+  --text-lg: clamp(1.05rem, 2.2vw, 1.15rem);
+  --text-xl: clamp(1.2rem, 3vw, 1.4rem);
+  --text-2xl: clamp(1.45rem, 4vw, 1.85rem);
+  --text-3xl: clamp(1.8rem, 5vw, 2.35rem);
+
+  --leading-tight: 1.15;
+  --leading-body: 1.5;
+  --tracking-label: 0.1em;
+
+  /* ---------- space (4px base) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* ---------- shape ---------- */
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --border-width: 1px;
+
+  /* Smallest interactive box. WCAG 2.5.5 asks for 44px; every control that a
+     child taps during a quiz has to clear it, including counties on the map. */
+  --tap-min: 44px;
+
+  /* ---------- motion ---------- */
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1);
+
+  /* ---------- semantic: light ---------- */
+  --surface: #ffffff;
+  --surface-sunken: var(--c-sea-050);
+  --surface-raised: #ffffff;
+
+  --ink: var(--c-sea-700);           /* 15.04:1 on --surface */
+  --ink-muted: var(--c-stone-600);   /*  5.92:1 on --surface */
+
+  --line: var(--c-stone-300);        /* decorative hairline */
+  --line-strong: var(--c-stone-500); /*  3.42:1 — borders that ARE the boundary */
+
+  --brand: var(--c-sea-500);         /*  6.46:1 on --surface */
+  --brand-strong: var(--c-sea-600);  /* 10.79:1 on --surface */
+  --brand-soft: var(--c-sea-100);
+  --on-brand: #ffffff;               /*  6.46:1 on --brand */
+
+  --accent: var(--c-clay-500);       /*  4.70:1 on --surface */
+  --focus: var(--c-clay-500);
+
+  --success: var(--c-moss-600);      /*  6.07:1 on --surface */
+  --success-soft: #e3f2eb;
+  --danger: var(--c-clay-600);       /*  6.51:1 on --surface */
+  --danger-soft: #faeae7;
+
+  --shadow-1: 0 1px 2px rgb(14 42 50 / 6%);
+  --shadow-2: 0 2px 4px rgb(14 42 50 / 5%), 0 12px 28px -14px rgb(14 42 50 / 22%);
+
+  /* ---------- semantic: map ---------- */
+  /* Fill stays light enough for the county label to clear 4.5:1. That means it
+     cannot also be dark enough to separate from the idle fill, so state is
+     carried by --map-stroke-* width and an overlaid glyph as well as by hue. */
+  --map-sea: var(--c-sea-200);
+  --map-idle: var(--c-sea-100);      /* label 11.99:1 */
+  --map-hover: #c2d8d6;              /* label 10.09:1 */
+  --map-target: var(--c-sun-500);    /* label  6.54:1 */
+  --map-correct: var(--c-moss-500);  /* label  4.56:1 */
+  --map-wrong: var(--c-clay-400);    /* label  5.02:1 */
+  --map-line: #7a9b99;
+  --map-line-strong: var(--c-sea-700);
+  --map-label: var(--c-sea-700);
+
+  --route-line: var(--c-sea-600);
+  --route-line-secondary: var(--c-stone-500);
+  --route-home: var(--c-sea-500);
+  --route-target: var(--c-clay-500);
+
+  color-scheme: light dark;
+}
+
+/* Dark via OS preference. Guarded so an explicit light choice still wins. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface: var(--c-sea-800);
+    --surface-sunken: var(--c-sea-900);
+    --surface-raised: #132b32;
+
+    --ink: var(--c-stone-100);         /* 12.92:1 on --surface */
+    --ink-muted: var(--c-stone-400);   /*  6.52:1 on --surface */
+
+    --line: #1b383f;
+    --line-strong: #4e7278;            /*  3.07:1 */
+
+    --brand: var(--c-sea-400);         /*  7.14:1 on --surface */
+    --brand-strong: var(--c-sea-300);  /*  9.65:1 on --surface */
+    --brand-soft: #10333b;
+    --on-brand: var(--c-sea-900);      /* 11.06:1 on --brand-strong */
+
+    --accent: var(--c-clay-300);       /*  6.42:1 on --surface */
+    --focus: var(--c-clay-300);
+
+    --success: var(--c-moss-400);      /*  7.25:1 on --surface */
+    --success-soft: #0c2e26;
+    --danger: #ff8371;                 /*  6.70:1 on --surface */
+    --danger-soft: #301a18;
+
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 40%);
+    --shadow-2: 0 2px 4px rgb(0 0 0 / 40%), 0 12px 28px -14px rgb(0 0 0 / 70%);
+
+    --map-sea: #0a1d21;
+    --map-idle: #183239;               /* label 10.85:1 */
+    --map-hover: #20434c;              /* label  8.56:1 */
+    --map-target: var(--c-sun-600);    /* label  4.80:1 */
+    --map-correct: #1b6349;            /* label  5.76:1 */
+    --map-wrong: #7e3729;              /* label  6.84:1 */
+    --map-line: #5c8288;
+    --map-line-strong: var(--c-stone-100);
+    --map-label: var(--c-stone-100);
+
+    --route-line: var(--c-sea-300);
+    --route-line-secondary: #5c8288;
+    --route-home: var(--c-sea-400);
+    --route-target: var(--c-clay-300);
+  }
+}
+
+/* Explicit dark choice. Repeats the block above so the toggle wins in both
+   directions — a token defined only inside the media query would never apply
+   when the OS says light but the user asked for dark. */
+:root[data-theme='dark'] {
+  --surface: var(--c-sea-800);
+  --surface-sunken: var(--c-sea-900);
+  --surface-raised: #132b32;
+
+  --ink: var(--c-stone-100);
+  --ink-muted: var(--c-stone-400);
+
+  --line: #1b383f;
+  --line-strong: #4e7278;
+
+  --brand: var(--c-sea-400);
+  --brand-strong: var(--c-sea-300);
+  --brand-soft: #10333b;
+  --on-brand: var(--c-sea-900);
+
+  --accent: var(--c-clay-300);
+  --focus: var(--c-clay-300);
+
+  --success: var(--c-moss-400);
+  --success-soft: #0c2e26;
+  --danger: #ff8371;
+  --danger-soft: #301a18;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 40%);
+  --shadow-2: 0 2px 4px rgb(0 0 0 / 40%), 0 12px 28px -14px rgb(0 0 0 / 70%);
+
+  --map-sea: #0a1d21;
+  --map-idle: #183239;
+  --map-hover: #20434c;
+  --map-target: var(--c-sun-600);
+  --map-correct: #1b6349;
+  --map-wrong: #7e3729;
+  --map-line: #5c8288;
+  --map-line-strong: var(--c-stone-100);
+  --map-label: var(--c-stone-100);
+
+  --route-line: var(--c-sea-300);
+  --route-line-secondary: #5c8288;
+  --route-home: var(--c-sea-400);
+  --route-target: var(--c-clay-300);
+}
