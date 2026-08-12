@@ -1,7 +1,9 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { RegistrationPlate } from '../../components/RegistrationPlate'
 import { getCountyById } from '../../data/counties'
 import { PLATES, type PlateEntry } from '../../data/plates'
+import { simulateHrSerial } from '../../lib/hrPlateSerial'
 import { pickWeightedId, recordAnswer } from '../../storage/progress'
 import type { DifficultyLevel } from '../../types/profile'
 
@@ -48,6 +50,21 @@ function choiceCount(level: DifficultyLevel): number {
   return 6
 }
 
+function serialsForChoices(choices: PlateEntry[]): Record<string, string> {
+  return Object.fromEntries(choices.map((plate) => [plate.code, simulateHrSerial()]))
+}
+
+function createRound(profileName: string, pool: PlateEntry[], nChoices: number, exclude?: string) {
+  const target = pickPlate(profileName, pool, exclude)
+  const choices = buildChoices(pool, target, nChoices)
+  return {
+    target,
+    choices,
+    targetSerial: simulateHrSerial(),
+    choiceSerials: serialsForChoices(choices),
+  }
+}
+
 export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
   const { t, i18n } = useTranslation()
   const language = i18n.language.startsWith('en') ? 'en' : 'hr'
@@ -56,17 +73,14 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
 
   const [direction, setDirection] = useState<Direction>('codeToPlace')
   const [score, setScore] = useState({ correct: 0, total: 0 })
-  const [target, setTarget] = useState<PlateEntry>(() => pickPlate(profileName, pool))
-  const [choices, setChoices] = useState<PlateEntry[]>(() =>
-    buildChoices(pool, pickPlate(profileName, pool), nChoices),
-  )
+  const [round, setRound] = useState(() => createRound(profileName, pool, nChoices))
   const [status, setStatus] = useState<'asking' | 'correct' | 'wrong'>('asking')
   const [picked, setPicked] = useState<string | null>(null)
 
+  const { target, choices, targetSerial, choiceSerials } = round
+
   function startRound(nextDirection: Direction = direction, exclude?: string): void {
-    const nextTarget = pickPlate(profileName, pool, exclude)
-    setTarget(nextTarget)
-    setChoices(buildChoices(pool, nextTarget, nChoices))
+    setRound(createRound(profileName, pool, nChoices, exclude))
     setStatus('asking')
     setPicked(null)
     setDirection(nextDirection)
@@ -126,9 +140,7 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
       <p className="prompt">{prompt}</p>
 
       {direction === 'codeToPlace' ? (
-        <div className="plate-badge" aria-hidden>
-          {target.code}
-        </div>
+        <RegistrationPlate code={target.code} serial={targetSerial} size="lg" />
       ) : null}
 
       {status === 'correct' ? <p className="feedback ok">{t('plates.correct')}</p> : null}
@@ -147,6 +159,11 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
               className={className}
               disabled={status === 'correct'}
               onClick={() => handlePick(plate.code)}
+              aria-label={
+                direction === 'placeToCode'
+                  ? plate.code
+                  : `${plate.city[language]}, ${getCountyById(plate.countyId)?.name[language] ?? ''}`
+              }
             >
               {direction === 'codeToPlace' ? (
                 <>
@@ -154,7 +171,11 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
                   <span>{getCountyById(plate.countyId)?.name[language]}</span>
                 </>
               ) : (
-                <strong className="plate-code">{plate.code}</strong>
+                <RegistrationPlate
+                  code={plate.code}
+                  serial={choiceSerials[plate.code] ?? '000-A'}
+                  size="sm"
+                />
               )}
             </button>
           )

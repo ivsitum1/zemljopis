@@ -251,17 +251,75 @@ main {
   font-size: 0.92rem;
 }
 
-.plate-badge {
+.reg-plate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  box-sizing: border-box;
   width: fit-content;
-  margin: 0.25rem 0;
-  padding: 0.55rem 1.1rem;
-  border-radius: 0.55rem;
-  border: 2px solid #1d2a24;
-  background: linear-gradient(180deg, #f7f7f2, #e8e8df);
+  max-width: 100%;
+  aspect-ratio: 520 / 110;
+  padding: 0.2em 0.45em 0.2em 0;
+  border: 2px solid #1a1a1a;
+  border-radius: 0.28em;
+  background: #f7f7f2;
+  color: #111;
   font-family: var(--font-display);
-  font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  user-select: none;
+}
+
+.reg-plate--lg {
+  margin: 0.35rem 0 0.6rem;
+  height: 3.6rem;
+  font-size: 1.55rem;
+}
+
+.reg-plate--sm {
+  width: 100%;
+  height: auto;
+  min-height: 2.35rem;
+  font-size: clamp(0.85rem, 3.6vw, 1.15rem);
+}
+
+.reg-plate__eu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: 1.55em;
+  margin-right: 0.15em;
+  padding: 0.15em 0.1em;
+  border-radius: 0.12em 0 0 0.12em;
+  background: #003399;
+  color: #fff;
+  gap: 0.05em;
+}
+
+.reg-plate__stars {
+  width: 1.15em;
+  height: 0.8em;
+}
+
+.reg-plate__cc {
+  font-family: var(--font-body);
+  font-size: 0.42em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.reg-plate__code,
+.reg-plate__serial {
+  white-space: nowrap;
+}
+
+.reg-plate__arms {
+  width: 0.72em;
+  height: 0.88em;
+  flex-shrink: 0;
 }
 
 .choice-grid {
@@ -289,9 +347,8 @@ main {
   font-size: 0.9rem;
 }
 
-.choice .plate-code {
-  font-size: 1.35rem;
-  letter-spacing: 0.06em;
+.choice .reg-plate {
+  justify-self: stretch;
 }
 
 .choice.correct {
@@ -357,19 +414,6 @@ main {
   background: color-mix(in srgb, var(--accent-soft) 45%, #fff);
   border-radius: 0 0.7rem 0.7rem 0;
   font-size: 1.05rem;
-}
-
-.mini-route {
-  display: grid;
-  gap: 0.35rem;
-}
-
-.mini-route-svg {
-  width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-  border: 1px solid var(--line);
-  background: #d9e8ef;
 }
 
 .route-line {
@@ -455,7 +499,79 @@ main {
   padding-left: 1.1rem;
 }
 
+.distance-viz {
+  display: grid;
+  gap: 0.75rem;
+  align-items: center;
+}
 
+@media (min-width: 720px) {
+  .distance-viz {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
 
+.croatia-distance-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background: #d9e8ef;
+}
+
+.croatia-distance-map .county.readonly {
+  fill: #f4faf7;
+  stroke: #3d5c52;
+  stroke-width: 1.1;
+  cursor: default;
+  pointer-events: none;
+}
+
+.compass-rose {
+  display: block;
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #f7faf8;
+}
+
+.compass-rose.subdued {
+  opacity: 0.55;
+  transform: scale(0.85);
+}
+
+.compass-rose.emphasized {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-deep) 35%, transparent);
+}
+
+.compass-ring {
+  fill: #eef5f1;
+  stroke: #3d5c52;
+  stroke-width: 1.5;
+}
+
+.compass-label {
+  fill: #1d2a24;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.compass-label.highlight {
+  fill: var(--accent-deep);
+  font-size: 13px;
+}
+
+.compass-needle {
+  stroke: var(--accent-deep);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.compass-hub {
+  fill: #3d5c52;
+}
 
 
