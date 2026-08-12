@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HomeScreen, type AppMode } from './components/HomeScreen'
-import { OfflineBanner } from './components/OfflineBanner'
+import { Logo } from './components/Logo'
 import { SetupScreen } from './components/SetupScreen'
 import { DistanceMode } from './modes/distance/DistanceMode'
 import { MapMode } from './modes/map/MapMode'
@@ -41,9 +41,10 @@ function App() {
 
   return (
     <div className="app-shell">
-      <OfflineBanner />
       <header className="topbar">
-        <span className="brand">{t('app.name')}</span>
+        <span className="brand">
+          <Logo variant="lockup" size={26} title={t('app.name')} />
+        </span>
         {profile && screen !== 'setup' ? (
           <button type="button" className="ghost compact" onClick={handleEditProfile}>
             {t('setup.changeProfile')}
@@ -57,23 +58,27 @@ function App() {
         ) : null}
 
         {screen === 'home' && profile ? (
-          <HomeScreen
-            profile={profile}
-            onOpenMode={handleOpenMode}
-            onEditProfile={handleEditProfile}
-          />
+          <HomeScreen profile={profile} onOpenMode={handleOpenMode} />
         ) : null}
 
         {screen === 'mode' && activeMode === 'map' && profile ? (
-          <MapMode level={profile.level} profileName={profile.name} onBack={handleBackHome} />
+          <MapMode
+            level={profile.level}
+            profileName={profile.name}
+            onBack={handleBackHome}
+          />
         ) : null}
 
         {screen === 'mode' && activeMode === 'plates' && profile ? (
-          <PlatesMode level={profile.level} profileName={profile.name} onBack={handleBackHome} />
+          <PlatesMode level={profile.level} onBack={handleBackHome} />
         ) : null}
 
         {screen === 'mode' && activeMode === 'places' && profile ? (
-          <PlacesMode level={profile.level} profileName={profile.name} onBack={handleBackHome} />
+          <PlacesMode
+            level={profile.level}
+            profileName={profile.name}
+            onBack={handleBackHome}
+          />
         ) : null}
 
         {screen === 'mode' && activeMode === 'distance' && profile ? (

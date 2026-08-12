@@ -1,37 +1,30 @@
 {
-  "name": "Zemljopis",
-  "short_name": "Zemljopis",
+  "name": "Obzor",
+  "short_name": "Obzor",
   "description": "Vježbaj karte, tablice i udaljenosti — Hrvatska prvo.",
-  "theme_color": "#1f6f5b",
-  "background_color": "#eef4ef",
+  "theme_color": "#0b6875",
+  "background_color": "#ecf2f2",
   "display": "standalone",
   "lang": "hr",
   "start_url": "/",
-  "scope": "/",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/favicon.svg",
+      "src": "icon-maskable.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

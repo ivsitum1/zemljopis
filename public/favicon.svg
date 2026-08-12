@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Zemljopis">
-  <rect width="64" height="64" rx="14" fill="#1f6f5b"/>
-  <circle cx="32" cy="32" r="18" fill="none" stroke="#eef4ef" stroke-width="3"/>
-  <ellipse cx="32" cy="32" rx="8" ry="18" fill="none" stroke="#eef4ef" stroke-width="2"/>
-  <path d="M14 32h36M32 14v36" stroke="#eef4ef" stroke-width="2"/>
-  <circle cx="40" cy="24" r="3" fill="#c9e265"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Obzor">
+  <!-- Solid tile, not a bare mark: a tab strip can be any colour, and the
+       horizon stroke would disappear against a dark one. -->
+  <rect width="48" height="48" rx="11" fill="#0B6875"/>
+  <g transform="translate(24 25) scale(0.76) translate(-24 -24)">
+    <path d="M24 4 L27 15 L38 18 L27 21 L24 32 L21 21 L10 18 L21 15 Z" fill="#F5A97F"/>
+    <path d="M5 37 Q24 27 43 37" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M5 43.5 Q24 34.5 43 43.5" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+  </g>
 </svg>

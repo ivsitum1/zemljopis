@@ -1,15 +1,11 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { RegistrationPlate } from '../../components/RegistrationPlate'
 import { getCountyById } from '../../data/counties'
 import { PLATES, type PlateEntry } from '../../data/plates'
-import { simulateHrSerial } from '../../lib/hrPlateSerial'
-import { pickWeightedId, recordAnswer } from '../../storage/progress'
 import type { DifficultyLevel } from '../../types/profile'
 
 type PlatesModeProps = {
   level: DifficultyLevel
-  profileName: string
   onBack: () => void
 }
 
@@ -24,14 +20,10 @@ function shuffle<T>(items: T[]): T[] {
   return copy
 }
 
-function pickPlate(profileName: string, pool: PlateEntry[], exclude?: string): PlateEntry {
-  const id = pickWeightedId(
-    profileName,
-    'plates',
-    pool.map((plate) => plate.code),
-    exclude,
-  )
-  return pool.find((plate) => plate.code === id) ?? pool[0]!
+function pickPlate(pool: PlateEntry[], exclude?: string): PlateEntry {
+  const candidates = pool.filter((plate) => plate.code !== exclude)
+  const list = candidates.length > 0 ? candidates : pool
+  return list[Math.floor(Math.random() * list.length)]!
 }
 
 function poolForLevel(level: DifficultyLevel): PlateEntry[] {
@@ -50,22 +42,7 @@ function choiceCount(level: DifficultyLevel): number {
   return 6
 }
 
-function serialsForChoices(choices: PlateEntry[]): Record<string, string> {
-  return Object.fromEntries(choices.map((plate) => [plate.code, simulateHrSerial()]))
-}
-
-function createRound(profileName: string, pool: PlateEntry[], nChoices: number, exclude?: string) {
-  const target = pickPlate(profileName, pool, exclude)
-  const choices = buildChoices(pool, target, nChoices)
-  return {
-    target,
-    choices,
-    targetSerial: simulateHrSerial(),
-    choiceSerials: serialsForChoices(choices),
-  }
-}
-
-export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
+export function PlatesMode({ level, onBack }: PlatesModeProps) {
   const { t, i18n } = useTranslation()
   const language = i18n.language.startsWith('en') ? 'en' : 'hr'
   const pool = useMemo(() => poolForLevel(level), [level])
@@ -73,14 +50,15 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
 
   const [direction, setDirection] = useState<Direction>('codeToPlace')
   const [score, setScore] = useState({ correct: 0, total: 0 })
-  const [round, setRound] = useState(() => createRound(profileName, pool, nChoices))
+  const [target, setTarget] = useState<PlateEntry>(() => pickPlate(pool))
+  const [choices, setChoices] = useState<PlateEntry[]>(() => buildChoices(pool, pickPlate(pool), nChoices))
   const [status, setStatus] = useState<'asking' | 'correct' | 'wrong'>('asking')
   const [picked, setPicked] = useState<string | null>(null)
 
-  const { target, choices, targetSerial, choiceSerials } = round
-
   function startRound(nextDirection: Direction = direction, exclude?: string): void {
-    setRound(createRound(profileName, pool, nChoices, exclude))
+    const nextTarget = pickPlate(pool, exclude)
+    setTarget(nextTarget)
+    setChoices(buildChoices(pool, nextTarget, nChoices))
     setStatus('asking')
     setPicked(null)
     setDirection(nextDirection)
@@ -92,13 +70,6 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
     }
 
     const isCorrect = code === target.code
-    recordAnswer({
-      profileName,
-      mode: 'plates',
-      entityId: target.code,
-      correct: isCorrect,
-      tags: ['GEO-OS-A.5.4'],
-    })
     setPicked(code)
     setScore((prev) => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
@@ -140,7 +111,9 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
       <p className="prompt">{prompt}</p>
 
       {direction === 'codeToPlace' ? (
-        <RegistrationPlate code={target.code} serial={targetSerial} size="lg" />
+        <div className="plate-badge" aria-hidden>
+          <span className="plate-code-value">{target.code}</span>
+        </div>
       ) : null}
 
       {status === 'correct' ? <p className="feedback ok">{t('plates.correct')}</p> : null}
@@ -159,11 +132,6 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
               className={className}
               disabled={status === 'correct'}
               onClick={() => handlePick(plate.code)}
-              aria-label={
-                direction === 'placeToCode'
-                  ? plate.code
-                  : `${plate.city[language]}, ${getCountyById(plate.countyId)?.name[language] ?? ''}`
-              }
             >
               {direction === 'codeToPlace' ? (
                 <>
@@ -171,11 +139,7 @@ export function PlatesMode({ level, profileName, onBack }: PlatesModeProps) {
                   <span>{getCountyById(plate.countyId)?.name[language]}</span>
                 </>
               ) : (
-                <RegistrationPlate
-                  code={plate.code}
-                  serial={choiceSerials[plate.code] ?? '000-A'}
-                  size="sm"
-                />
+                <strong className="plate-code">{plate.code}</strong>
               )}
             </button>
           )

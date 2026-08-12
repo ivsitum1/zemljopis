@@ -1,27 +1,18 @@
-@import '@fontsource/fraunces/latin-600.css';
-@import '@fontsource/fraunces/latin-700.css';
-@import '@fontsource/source-sans-3/latin-400.css';
-@import '@fontsource/source-sans-3/latin-600.css';
-@import '@fontsource/source-sans-3/latin-700.css';
+/* Fonts are bundled, not fetched. The app promises to work offline, and a
+   Google Fonts @import breaks that promise on the very first visit without a
+   network. Only the wght axis is imported; the browser picks the latin /
+   latin-ext subset it needs from the unicode-range declarations. */
+@import '@fontsource-variable/bricolage-grotesque/wght.css';
+@import '@fontsource-variable/public-sans/wght.css';
+@import './styles/tokens.css';
 
 :root {
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
-  --ink: #1d2a24;
-  --muted: #5c6b63;
-  --paper: #eef4ef;
-  --line: #c9d5cd;
-  --accent: #1f6f5b;
-  --accent-deep: #145244;
-  --accent-soft: #c7e4d8;
   font-family: var(--font-body);
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: var(--leading-body);
   font-weight: 400;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top left, #d9ebe2 0%, transparent 40%),
-    radial-gradient(circle at bottom right, #d7e3f0 0%, transparent 35%),
-    var(--paper);
+  background: var(--surface-sunken);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,12 +31,8 @@ body,
 
 body {
   margin: 0;
-}
-
-button,
-input,
-select {
-  font: inherit;
+  background: var(--surface-sunken);
+  color: var(--ink);
 }
 
 h1,
@@ -53,4 +40,37 @@ h2,
 h3,
 p {
   margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  line-height: var(--leading-tight);
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* One focus treatment for the whole app. The previous styles had none at all,
+   which made the quiz unusable by keyboard. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
