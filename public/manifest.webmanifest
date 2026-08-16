@@ -6,7 +6,10 @@
   "background_color": "#ecf2f2",
   "display": "standalone",
   "lang": "hr",
+  "id": "/",
+  "scope": "/",
   "start_url": "/",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icon-maskable.svg",
