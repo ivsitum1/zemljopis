@@ -6,7 +6,8 @@
   "background_color": "#ecf2f2",
   "display": "standalone",
   "lang": "hr",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "icons": [
     {
       "src": "icon-maskable.svg",

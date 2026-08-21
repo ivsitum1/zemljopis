@@ -26,6 +26,15 @@ Otvori adresu koju Vite ispiše:
 
 Ako se na mobitelu ne učitava, Windows firewall možda blokira port 5173 — dopusti Node.js privatnu mrežu.
 
+## Instalacija (PWA)
+
+Produkcijska verzija (GitHub Pages):
+
+**https://ivsitum1.github.io/zemljopis/**
+
+Na Androidu (Chrome/Edge): otvori URL → izbornik → **Install app** / **Add to Home screen**.
+Za instalaciju treba HTTPS; lokalni `npm run dev` nije dovoljan.
+
 ## Korisne naredbe
 
 ```bash
