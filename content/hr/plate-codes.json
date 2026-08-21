@@ -1,0 +1,206 @@
+[
+  {
+    "code": "BJ",
+    "placeId": "bjelovar",
+    "name": { "hr": "Bjelovar", "en": "Bjelovar" },
+    "countyId": "bbz"
+  },
+  {
+    "code": "BM",
+    "placeId": "beli-manastir",
+    "name": { "hr": "Beli Manastir", "en": "Beli Manastir" },
+    "countyId": "obz"
+  },
+  {
+    "code": "ČK",
+    "placeId": "cakovec",
+    "name": { "hr": "Čakovec", "en": "Čakovec" },
+    "countyId": "mez"
+  },
+  {
+    "code": "DA",
+    "placeId": "daruvar",
+    "name": { "hr": "Daruvar", "en": "Daruvar" },
+    "countyId": "bbz"
+  },
+  {
+    "code": "DE",
+    "placeId": "delnice",
+    "name": { "hr": "Delnice", "en": "Delnice" },
+    "countyId": "pgz"
+  },
+  {
+    "code": "DJ",
+    "placeId": "djakovo",
+    "name": { "hr": "Đakovo", "en": "Đakovo" },
+    "countyId": "obz"
+  },
+  {
+    "code": "DU",
+    "placeId": "dubrovnik",
+    "name": { "hr": "Dubrovnik", "en": "Dubrovnik" },
+    "countyId": "dnz"
+  },
+  {
+    "code": "GS",
+    "placeId": "gospic",
+    "name": { "hr": "Gospić", "en": "Gospić" },
+    "countyId": "lsz"
+  },
+  {
+    "code": "IM",
+    "placeId": "imotski",
+    "name": { "hr": "Imotski", "en": "Imotski" },
+    "countyId": "sdz"
+  },
+  {
+    "code": "KA",
+    "placeId": "karlovac",
+    "name": { "hr": "Karlovac", "en": "Karlovac" },
+    "countyId": "kzz"
+  },
+  {
+    "code": "KC",
+    "placeId": "koprivnica",
+    "name": { "hr": "Koprivnica", "en": "Koprivnica" },
+    "countyId": "ksz"
+  },
+  {
+    "code": "KR",
+    "placeId": "krapina",
+    "name": { "hr": "Krapina", "en": "Krapina" },
+    "countyId": "kzz2"
+  },
+  {
+    "code": "KT",
+    "placeId": "kutina",
+    "name": { "hr": "Kutina", "en": "Kutina" },
+    "countyId": "smz"
+  },
+  {
+    "code": "KŽ",
+    "placeId": "krizevci",
+    "name": { "hr": "Križevci", "en": "Križevci" },
+    "countyId": "ksz"
+  },
+  {
+    "code": "MA",
+    "placeId": "makarska",
+    "name": { "hr": "Makarska", "en": "Makarska" },
+    "countyId": "sdz"
+  },
+  {
+    "code": "NA",
+    "placeId": "nasice",
+    "name": { "hr": "Našice", "en": "Našice" },
+    "countyId": "obz"
+  },
+  {
+    "code": "NG",
+    "placeId": "nova-gradiska",
+    "name": { "hr": "Nova Gradiška", "en": "Nova Gradiška" },
+    "countyId": "bpz"
+  },
+  {
+    "code": "OG",
+    "placeId": "ogulin",
+    "name": { "hr": "Ogulin", "en": "Ogulin" },
+    "countyId": "kzz"
+  },
+  {
+    "code": "OS",
+    "placeId": "osijek",
+    "name": { "hr": "Osijek", "en": "Osijek" },
+    "countyId": "obz"
+  },
+  {
+    "code": "PU",
+    "placeId": "pula",
+    "name": { "hr": "Pula", "en": "Pula" },
+    "countyId": "isz"
+  },
+  {
+    "code": "PŽ",
+    "placeId": "pozega",
+    "name": { "hr": "Požega", "en": "Požega" },
+    "countyId": "psz"
+  },
+  {
+    "code": "RI",
+    "placeId": "rijeka",
+    "name": { "hr": "Rijeka", "en": "Rijeka" },
+    "countyId": "pgz"
+  },
+  {
+    "code": "SB",
+    "placeId": "slavonski-brod",
+    "name": { "hr": "Slavonski Brod", "en": "Slavonski Brod" },
+    "countyId": "bpz"
+  },
+  {
+    "code": "SK",
+    "placeId": "sisak",
+    "name": { "hr": "Sisak", "en": "Sisak" },
+    "countyId": "smz"
+  },
+  {
+    "code": "SL",
+    "placeId": "slatina",
+    "name": { "hr": "Slatina", "en": "Slatina" },
+    "countyId": "vpz"
+  },
+  {
+    "code": "ST",
+    "placeId": "split",
+    "name": { "hr": "Split", "en": "Split" },
+    "countyId": "sdz"
+  },
+  {
+    "code": "ŠI",
+    "placeId": "sibenik",
+    "name": { "hr": "Šibenik", "en": "Šibenik" },
+    "countyId": "szz"
+  },
+  {
+    "code": "VK",
+    "placeId": "vinkovci",
+    "name": { "hr": "Vinkovci", "en": "Vinkovci" },
+    "countyId": "vsz"
+  },
+  {
+    "code": "VT",
+    "placeId": "virovitica",
+    "name": { "hr": "Virovitica", "en": "Virovitica" },
+    "countyId": "vpz"
+  },
+  {
+    "code": "VU",
+    "placeId": "vukovar",
+    "name": { "hr": "Vukovar", "en": "Vukovar" },
+    "countyId": "vsz"
+  },
+  {
+    "code": "VŽ",
+    "placeId": "varazdin",
+    "name": { "hr": "Varaždin", "en": "Varaždin" },
+    "countyId": "vaz"
+  },
+  {
+    "code": "ZD",
+    "placeId": "zadar",
+    "name": { "hr": "Zadar", "en": "Zadar" },
+    "countyId": "zdz"
+  },
+  {
+    "code": "ZG",
+    "placeId": "zagreb",
+    "name": { "hr": "Zagreb", "en": "Zagreb" },
+    "countyId": "gzg"
+  },
+  {
+    "code": "ŽU",
+    "placeId": "zupanja",
+    "name": { "hr": "Županja", "en": "Županja" },
+    "countyId": "vsz"
+  }
+]

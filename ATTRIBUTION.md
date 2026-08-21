@@ -12,6 +12,7 @@ proprietary (see `LICENSE`). Each entry below retains its own license.
 | UI display font | [Bricolage Grotesque](https://github.com/ateliertriay/bricolage) | OFL 1.1 (SIL) | Bundled via `@fontsource-variable/bricolage-grotesque`, wght axis. Self-hosted so the app works offline. |
 | UI body font | [Public Sans](https://github.com/uswds/public-sans) | OFL 1.1 (SIL) | Bundled via `@fontsource-variable/public-sans`, wght axis. Self-hosted so the app works offline. |
 | Flag SVGs (if added) | Wikimedia Commons / PD sources | Verify each file | Some state symbols restrict use |
+| Place encyclopaedia facts (`content/hr/places-catalogue.json`) | Editorial educational summaries (geography curriculum tone) | Project text | Approximate; not scraped from a single third-party dataset. Enriched 2026-08-21 (Task 12). |
 
 ## Dependencies
 

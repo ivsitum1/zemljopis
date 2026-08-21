@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HomeScreen, type AppMode } from './components/HomeScreen'
 import { Logo } from './components/Logo'
+import { OfflineBanner } from './components/OfflineBanner'
 import { SetupScreen } from './components/SetupScreen'
 import { DistanceMode } from './modes/distance/DistanceMode'
 import { MapMode } from './modes/map/MapMode'
@@ -41,16 +42,19 @@ function App() {
 
   return (
     <div className="app-shell">
-      <header className="topbar">
-        <span className="brand">
-          <Logo variant="lockup" size={26} title={t('app.name')} />
-        </span>
-        {profile && screen !== 'setup' ? (
-          <button type="button" className="ghost compact" onClick={handleEditProfile}>
-            {t('setup.changeProfile')}
-          </button>
-        ) : null}
-      </header>
+      <div className="app-chrome">
+        <OfflineBanner />
+        <header className="topbar">
+          <span className="brand">
+            <Logo variant="lockup" size={26} title={t('app.name')} />
+          </span>
+          {profile && screen !== 'setup' ? (
+            <button type="button" className="ghost compact" onClick={handleEditProfile}>
+              {t('setup.changeProfile')}
+            </button>
+          ) : null}
+        </header>
+      </div>
 
       <main>
         {screen === 'setup' ? (
@@ -65,18 +69,25 @@ function App() {
           <MapMode
             level={profile.level}
             profileName={profile.name}
+            homeCityId={profile.homeCityId}
             onBack={handleBackHome}
           />
         ) : null}
 
         {screen === 'mode' && activeMode === 'plates' && profile ? (
-          <PlatesMode level={profile.level} onBack={handleBackHome} />
+          <PlatesMode
+            level={profile.level}
+            profileName={profile.name}
+            homeCityId={profile.homeCityId}
+            onBack={handleBackHome}
+          />
         ) : null}
 
         {screen === 'mode' && activeMode === 'places' && profile ? (
           <PlacesMode
             level={profile.level}
             profileName={profile.name}
+            homeCityId={profile.homeCityId}
             onBack={handleBackHome}
           />
         ) : null}

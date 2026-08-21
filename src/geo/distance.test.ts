@@ -6,6 +6,7 @@ import {
   directionChoices4,
   distanceBandsForLevel,
   haversineKm,
+  interpolateGeodesic,
   toCompass4,
   toCompass8,
 } from '../geo/distance'
@@ -40,5 +41,20 @@ describe('distance helpers', () => {
     const bands = distanceBandsForLevel(2)
     expect(bandForDistance(100, bands).id).toBe('80-200')
     expect(toCompass8(40)).toBe('NE')
+  })
+
+  it('interpolates a geodesic with endpoints and in-between samples', () => {
+    const zagreb = { lat: 45.815, lon: 15.982 }
+    const split = { lat: 43.508, lon: 16.44 }
+    const pts = interpolateGeodesic(zagreb.lat, zagreb.lon, split.lat, split.lon, 8)
+    expect(pts).toHaveLength(9)
+    expect(pts[0]).toEqual(zagreb)
+    expect(pts[8]).toEqual(split)
+    for (const point of pts.slice(1, -1)) {
+      expect(point.lat).toBeLessThan(zagreb.lat)
+      expect(point.lat).toBeGreaterThan(split.lat)
+      expect(point.lon).toBeGreaterThan(zagreb.lon)
+      expect(point.lon).toBeLessThan(split.lon)
+    }
   })
 })

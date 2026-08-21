@@ -6,6 +6,10 @@ Prvo Hrvatska (offline), zatim Europa i svijet. Kod je proprietary — vidi `LIC
 Aplikacija se do kolovoza 2026. zvala **Zemljopis**. Vizualni identitet i
 smjernice: `docs/brand/`.
 
+Svaki od četiri načina (karta, tablice, mjesta, udaljenost) nudi iste stilove
+učenja: **Kartice**, **Kviz** (sam ili pass & play) i **Enciklopedija**, putem
+zajedničkog `LearningShell` sloja.
+
 ## Zahtjevi
 
 - [Node.js](https://nodejs.org/) 20+ (preporučeno 22/24)

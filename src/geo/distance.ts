@@ -50,6 +50,72 @@ export function toCompass8(bearing: number): Compass8 {
   return COMPASS8_ALL[index]!
 }
 
+export type GeoPoint = { lat: number; lon: number }
+
+/**
+ * Sample a spherical geodesic from (lat1, lon1) to (lat2, lon2).
+ * Returns `segments + 1` points, including the exact endpoints.
+ */
+export function interpolateGeodesic(
+  lat1: number,
+  lon1: number,
+  lat2: number,
+  lon2: number,
+  segments = 16,
+): GeoPoint[] {
+  const n = Math.max(1, Math.floor(segments))
+  const points: GeoPoint[] = []
+  for (let i = 0; i <= n; i += 1) {
+    const fraction = i / n
+    if (fraction <= 0) {
+      points.push({ lat: lat1, lon: lon1 })
+    } else if (fraction >= 1) {
+      points.push({ lat: lat2, lon: lon2 })
+    } else {
+      points.push(intermediatePoint(lat1, lon1, lat2, lon2, fraction))
+    }
+  }
+  return points
+}
+
+function intermediatePoint(
+  lat1: number,
+  lon1: number,
+  lat2: number,
+  lon2: number,
+  fraction: number,
+): GeoPoint {
+  const toRad = (deg: number) => (deg * Math.PI) / 180
+  const toDeg = (rad: number) => (rad * 180) / Math.PI
+  const φ1 = toRad(lat1)
+  const λ1 = toRad(lon1)
+  const φ2 = toRad(lat2)
+  const λ2 = toRad(lon2)
+  const d =
+    2 *
+    Math.asin(
+      Math.min(
+        1,
+        Math.sqrt(
+          Math.sin((φ2 - φ1) / 2) ** 2 +
+            Math.cos(φ1) * Math.cos(φ2) * Math.sin((λ2 - λ1) / 2) ** 2,
+        ),
+      ),
+    )
+  if (d < 1e-12) {
+    return { lat: lat1, lon: lon1 }
+  }
+  const a = Math.sin((1 - fraction) * d) / Math.sin(d)
+  const b = Math.sin(fraction * d) / Math.sin(d)
+  const x = a * Math.cos(φ1) * Math.cos(λ1) + b * Math.cos(φ2) * Math.cos(λ2)
+  const y = a * Math.cos(φ1) * Math.sin(λ1) + b * Math.cos(φ2) * Math.sin(λ2)
+  const z = a * Math.sin(φ1) + b * Math.sin(φ2)
+  return {
+    lat: toDeg(Math.atan2(z, Math.sqrt(x * x + y * y))),
+    lon: toDeg(Math.atan2(y, x)),
+  }
+}
+
 /**
  * Four direction choices for a quiz: correct, both neighbours, and opposite.
  * Returned in clockwise compass order (N → NW), not shuffled.

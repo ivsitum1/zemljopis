@@ -1,0 +1,3213 @@
+[
+  {
+    "id": "zagreb",
+    "name": {
+      "hr": "Zagreb",
+      "en": "Zagreb"
+    },
+    "isOfficialCity": true,
+    "countyId": "gzg",
+    "lat": 45.815,
+    "lon": 15.982,
+    "facts": [
+      {
+        "hr": "Glavni grad Hrvatske.",
+        "en": "Capital city of Croatia."
+      },
+      {
+        "hr": "U blizini su Medvednica i rijeka Sava.",
+        "en": "Near Medvednica mountain and the Sava river."
+      },
+      {
+        "hr": "Poznat po Gornjem gradu i katedrali.",
+        "en": "Known for the Upper Town and the cathedral."
+      },
+      {
+        "hr": "Najveće gospodarsko i prometno središte zemlje.",
+        "en": "The country's largest economic and transport hub."
+      },
+      {
+        "hr": "Leži na dodiru panonskog i dinarskog prostora.",
+        "en": "Lies at the contact of the Pannonian and Dinaric areas."
+      }
+    ],
+    "region": {
+      "hr": "Središnja Hrvatska",
+      "en": "Central Croatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4",
+      "GEO-OS-A.6.1"
+    ],
+    "plateCode": "ZG"
+  },
+  {
+    "id": "split",
+    "name": {
+      "hr": "Split",
+      "en": "Split"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.508,
+    "lon": 16.44,
+    "facts": [
+      {
+        "hr": "Najveći grad u Dalmaciji.",
+        "en": "The largest city in Dalmatia."
+      },
+      {
+        "hr": "Poznat po Dioklecijanovoj palači.",
+        "en": "Known for Diocletian's Palace."
+      },
+      {
+        "hr": "Važna luka na Jadranu.",
+        "en": "An important Adriatic port."
+      },
+      {
+        "hr": "Središte Splitsko-dalmatinske županije i regionalni prometni čvor.",
+        "en": "Seat of Split-Dalmatia County and a regional transport node."
+      },
+      {
+        "hr": "Povezuje kopno s otocima srednje Dalmacije.",
+        "en": "Links the mainland with the islands of central Dalmatia."
+      }
+    ],
+    "region": {
+      "hr": "Dalmacija",
+      "en": "Dalmatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "ST"
+  },
+  {
+    "id": "rijeka",
+    "name": {
+      "hr": "Rijeka",
+      "en": "Rijeka"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.327,
+    "lon": 14.442,
+    "facts": [
+      {
+        "hr": "Najveća hrvatska luka.",
+        "en": "Croatia's largest seaport."
+      },
+      {
+        "hr": "Leži u Kvarnerskom zaljevu.",
+        "en": "Lies on the Kvarner Gulf."
+      },
+      {
+        "hr": "Poznata po Riječkom karnevalu.",
+        "en": "Known for the Rijeka Carnival."
+      },
+      {
+        "hr": "Ključan izlaz prema Srednjoj Europi (željeznica i ceste).",
+        "en": "A key outlet toward Central Europe (rail and roads)."
+      },
+      {
+        "hr": "Središte Primorsko-goranske županije.",
+        "en": "Seat of Primorje-Gorski Kotar County."
+      }
+    ],
+    "region": {
+      "hr": "Sjeverni Jadran",
+      "en": "Northern Adriatic"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "RI"
+  },
+  {
+    "id": "osijek",
+    "name": {
+      "hr": "Osijek",
+      "en": "Osijek"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.555,
+    "lon": 18.696,
+    "facts": [
+      {
+        "hr": "Najveći grad u Slavoniji.",
+        "en": "The largest city in Slavonia."
+      },
+      {
+        "hr": "Leži na rijeci Dravi.",
+        "en": "Lies on the Drava river."
+      },
+      {
+        "hr": "U blizini je Park prirode Kopački rit.",
+        "en": "Near Kopački rit Nature Park."
+      },
+      {
+        "hr": "Središte Osječko-baranjske županije i panonskog nizinskog prostora.",
+        "en": "Seat of Osijek-Baranja County in the Pannonian lowland."
+      },
+      {
+        "hr": "Važan poljoprivredni i sveučilišni centar istoka Hrvatske.",
+        "en": "An important agricultural and university centre of eastern Croatia."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "OS"
+  },
+  {
+    "id": "zadar",
+    "name": {
+      "hr": "Zadar",
+      "en": "Zadar"
+    },
+    "isOfficialCity": true,
+    "countyId": "zdz",
+    "lat": 44.119,
+    "lon": 15.231,
+    "facts": [
+      {
+        "hr": "Grad na poluotoku uz more.",
+        "en": "A city on a peninsula by the sea."
+      },
+      {
+        "hr": "Poznat po Morskim orguljama.",
+        "en": "Known for the Sea Organ."
+      },
+      {
+        "hr": "U blizini su Nacionalni parkovi Paklenica i Kornati.",
+        "en": "Near Paklenica and Kornati national parks."
+      },
+      {
+        "hr": "Središte Zadarske županije i luka za otoke sjeverne Dalmacije.",
+        "en": "Seat of Zadar County and a ferry hub for northern Dalmatian islands."
+      }
+    ],
+    "region": {
+      "hr": "Sjeverna Dalmacija",
+      "en": "Northern Dalmatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "ZD"
+  },
+  {
+    "id": "velika-gorica",
+    "name": {
+      "hr": "Velika Gorica",
+      "en": "Velika Gorica"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.713,
+    "lon": 16.076,
+    "facts": [
+      {
+        "hr": "Grad južno od Zagreba, u Zagrebačkoj županiji.",
+        "en": "City south of Zagreb, in Zagreb County."
+      },
+      {
+        "hr": "U blizini je Zračna luka Franjo Tuđman.",
+        "en": "Near Franjo Tuđman Airport."
+      },
+      {
+        "hr": "Leži u Turopolju, panonskoj ravnici uz Savu.",
+        "en": "Lies in Turopolje, a Pannonian plain by the Sava."
+      }
+    ],
+    "region": {
+      "hr": "Središnja Hrvatska",
+      "en": "Central Croatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "pula",
+    "name": {
+      "hr": "Pula",
+      "en": "Pula"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 44.867,
+    "lon": 13.85,
+    "facts": [
+      {
+        "hr": "Najveći grad u Istri.",
+        "en": "The largest city in Istria."
+      },
+      {
+        "hr": "Poznata po rimskom amfiteatru (Areni).",
+        "en": "Known for the Roman amphitheatre (Arena)."
+      },
+      {
+        "hr": "Važna luka i turističko središte.",
+        "en": "An important port and tourist centre."
+      },
+      {
+        "hr": "Središte Istarske županije; Istra je poluotok između Kvarnera i Tršćanskog zaljeva.",
+        "en": "Seat of Istria County; Istria is a peninsula between Kvarner and the Gulf of Trieste."
+      }
+    ],
+    "region": {
+      "hr": "Istra",
+      "en": "Istria"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "PU"
+  },
+  {
+    "id": "slavonski-brod",
+    "name": {
+      "hr": "Slavonski Brod",
+      "en": "Slavonski Brod"
+    },
+    "isOfficialCity": true,
+    "countyId": "bpz",
+    "lat": 45.16,
+    "lon": 18.016,
+    "facts": [
+      {
+        "hr": "Leži na rijeci Savi, nasuprot Bosanskom Brodu.",
+        "en": "Lies on the Sava, opposite Bosanski Brod."
+      },
+      {
+        "hr": "Važan grad uz autocestu prema istoku.",
+        "en": "An important city on the motorway toward the east."
+      },
+      {
+        "hr": "Središte Brodsko-posavske županije.",
+        "en": "Seat of Brod-Posavina County."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "SB"
+  },
+  {
+    "id": "karlovac",
+    "name": {
+      "hr": "Karlovac",
+      "en": "Karlovac"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz",
+    "lat": 45.493,
+    "lon": 15.555,
+    "facts": [
+      {
+        "hr": "Poznat po četiri rijeke (Kupa, Korana, Mrežnica, Dobra).",
+        "en": "Known for four rivers (Kupa, Korana, Mrežnica, Dobra)."
+      },
+      {
+        "hr": "Leži na putu između Zagreba i Jadrana.",
+        "en": "Lies on the route between Zagreb and the Adriatic."
+      },
+      {
+        "hr": "Središte Karlovačke županije; povijesno važan prometni položaj.",
+        "en": "Seat of Karlovac County; historically an important transport position."
+      }
+    ],
+    "region": {
+      "hr": "Središnja Hrvatska",
+      "en": "Central Croatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "KA"
+  },
+  {
+    "id": "varazdin",
+    "name": {
+      "hr": "Varaždin",
+      "en": "Varaždin"
+    },
+    "isOfficialCity": true,
+    "countyId": "vaz",
+    "lat": 46.306,
+    "lon": 16.338,
+    "facts": [
+      {
+        "hr": "Poznat po baroknoj jezgri grada.",
+        "en": "Known for its Baroque city centre."
+      },
+      {
+        "hr": "Leži blizu rijeke Drave.",
+        "en": "Lies near the Drava river."
+      },
+      {
+        "hr": "Često ga zovu \"gradom baroka\".",
+        "en": "Often called a \"Baroque city\"."
+      },
+      {
+        "hr": "Središte Varaždinske županije u panonskom prostoru.",
+        "en": "Seat of Varaždin County in the Pannonian area."
+      }
+    ],
+    "region": {
+      "hr": "Sjeverozapadna Hrvatska",
+      "en": "Northwestern Croatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "VŽ"
+  },
+  {
+    "id": "sibenik",
+    "name": {
+      "hr": "Šibenik",
+      "en": "Šibenik"
+    },
+    "isOfficialCity": true,
+    "countyId": "szz",
+    "lat": 43.735,
+    "lon": 15.895,
+    "facts": [
+      {
+        "hr": "Grad na ušću Krke u more.",
+        "en": "A city where the Krka river meets the sea."
+      },
+      {
+        "hr": "Poznat po katedrali sv. Jakova.",
+        "en": "Known for the Cathedral of St James."
+      },
+      {
+        "hr": "U blizini je Nacionalni park Krka.",
+        "en": "Near Krka National Park."
+      },
+      {
+        "hr": "Središte Šibensko-kninske županije.",
+        "en": "Seat of Šibenik-Knin County."
+      }
+    ],
+    "region": {
+      "hr": "Dalmacija",
+      "en": "Dalmatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "ŠI"
+  },
+  {
+    "id": "dubrovnik",
+    "name": {
+      "hr": "Dubrovnik",
+      "en": "Dubrovnik"
+    },
+    "isOfficialCity": true,
+    "countyId": "dnz",
+    "lat": 42.651,
+    "lon": 18.094,
+    "facts": [
+      {
+        "hr": "Poznat po starim zidinama i Starom gradu.",
+        "en": "Known for its walls and Old Town."
+      },
+      {
+        "hr": "Leži na krajnjem jugu hrvatske obale.",
+        "en": "Lies at the far south of the Croatian coast."
+      },
+      {
+        "hr": "Važno turističko odredište.",
+        "en": "A major tourist destination."
+      },
+      {
+        "hr": "Središte Dubrovačko-neretvanske županije; nekad samostalna Dubrovačka Republika.",
+        "en": "Seat of Dubrovnik-Neretva County; formerly the independent Republic of Ragusa."
+      }
+    ],
+    "region": {
+      "hr": "Južna Dalmacija",
+      "en": "Southern Dalmatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "DU"
+  },
+  {
+    "id": "sisak",
+    "name": {
+      "hr": "Sisak",
+      "en": "Sisak"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.485,
+    "lon": 16.373,
+    "facts": [
+      {
+        "hr": "Leži na ušću Kupe u Savu.",
+        "en": "Lies where the Kupa joins the Sava."
+      },
+      {
+        "hr": "Poznat po industriji i rijekama.",
+        "en": "Known for industry and rivers."
+      },
+      {
+        "hr": "Središte Sisačko-moslavačke županije.",
+        "en": "Seat of Sisak-Moslavina County."
+      }
+    ],
+    "region": {
+      "hr": "Središnja Hrvatska",
+      "en": "Central Croatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "SK"
+  },
+  {
+    "id": "kastela",
+    "name": {
+      "hr": "Kaštela",
+      "en": "Kaštela"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.55,
+    "lon": 16.383,
+    "facts": [
+      {
+        "hr": "Niz od sedam naselja uz Kaštelanski zaljev, između Splita i Trogira.",
+        "en": "A string of seven settlements along Kaštela Bay, between Split and Trogir."
+      },
+      {
+        "hr": "Ime dolazi od kaštela (utvrđenih ljetnikovaca) uz more.",
+        "en": "The name comes from coastal castles (kašteli) along the shore."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "samobor",
+    "name": {
+      "hr": "Samobor",
+      "en": "Samobor"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.801,
+    "lon": 15.711,
+    "facts": [
+      {
+        "hr": "Grad zapadno od Zagreba, poznat po staroj jezgri i kremšnitama.",
+        "en": "Town west of Zagreb, known for its old centre and cream slices."
+      },
+      {
+        "hr": "Leži na rubu Samoborskog gorja.",
+        "en": "Lies on the edge of the Samobor Hills."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "bjelovar",
+    "name": {
+      "hr": "Bjelovar",
+      "en": "Bjelovar"
+    },
+    "isOfficialCity": true,
+    "countyId": "bbz",
+    "lat": 45.899,
+    "lon": 16.843,
+    "facts": [
+      {
+        "hr": "Grad u bilogorskom prostoru.",
+        "en": "A city in the Bilogora area."
+      },
+      {
+        "hr": "Poznat po sajmovima i poljoprivredi.",
+        "en": "Known for fairs and agriculture."
+      },
+      {
+        "hr": "Središte Bjelovarsko-bilogorske županije.",
+        "en": "Seat of Bjelovar-Bilogora County."
+      }
+    ],
+    "region": {
+      "hr": "Bilogora",
+      "en": "Bilogora"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "BJ"
+  },
+  {
+    "id": "vinkovci",
+    "name": {
+      "hr": "Vinkovci",
+      "en": "Vinkovci"
+    },
+    "isOfficialCity": true,
+    "countyId": "vsz",
+    "lat": 45.288,
+    "lon": 18.805,
+    "facts": [
+      {
+        "hr": "Jedan od najstarijih gradova u Europi po kontinuiranom naselju.",
+        "en": "Among Europe's oldest continuously inhabited cities."
+      },
+      {
+        "hr": "Poznat po Vinkovačkim jesenima.",
+        "en": "Known for the Vinkovci Autumns festival."
+      },
+      {
+        "hr": "Važno željezničko čvorište u Vukovarsko-srijemskoj županiji.",
+        "en": "An important rail hub in Vukovar-Srijem County."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "VK"
+  },
+  {
+    "id": "koprivnica",
+    "name": {
+      "hr": "Koprivnica",
+      "en": "Koprivnica"
+    },
+    "isOfficialCity": true,
+    "countyId": "ksz",
+    "lat": 46.164,
+    "lon": 16.828,
+    "facts": [
+      {
+        "hr": "Grad u Podravini.",
+        "en": "A city in the Podravina region."
+      },
+      {
+        "hr": "Poznat po prehrambenoj industriji.",
+        "en": "Known for the food industry."
+      },
+      {
+        "hr": "Središte Koprivničko-križevačke županije.",
+        "en": "Seat of Koprivnica-Križevci County."
+      }
+    ],
+    "region": {
+      "hr": "Podravina",
+      "en": "Podravina"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "KC"
+  },
+  {
+    "id": "cakovec",
+    "name": {
+      "hr": "Čakovec",
+      "en": "Čakovec"
+    },
+    "isOfficialCity": true,
+    "countyId": "mez",
+    "lat": 46.385,
+    "lon": 16.434,
+    "facts": [
+      {
+        "hr": "Središte Međimurja, između Mure i Drave.",
+        "en": "Centre of Međimurje, between the Mura and Drava."
+      },
+      {
+        "hr": "Poznat po Zrinskih dvorcu.",
+        "en": "Known for the Zrinski Castle."
+      },
+      {
+        "hr": "Središte Međimurske županije; gusto naseljeno panonsko područje.",
+        "en": "Seat of Međimurje County; a densely populated Pannonian area."
+      }
+    ],
+    "region": {
+      "hr": "Međimurje",
+      "en": "Međimurje"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "ČK"
+  },
+  {
+    "id": "solin",
+    "name": {
+      "hr": "Solin",
+      "en": "Solin"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.542,
+    "lon": 16.492,
+    "facts": [
+      {
+        "hr": "Nasljednik antičke Salone, rimskog središta Dalmacije.",
+        "en": "Successor of ancient Salona, the Roman centre of Dalmatia."
+      },
+      {
+        "hr": "Leži sjeverno od Splita, uz rijeku Jadro.",
+        "en": "Lies north of Split, by the Jadro river."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "zapresic",
+    "name": {
+      "hr": "Zaprešić",
+      "en": "Zaprešić"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.857,
+    "lon": 15.805,
+    "facts": [
+      {
+        "hr": "Grad sjeverozapadno od Zagreba, u Zagrebačkoj županiji.",
+        "en": "Town northwest of Zagreb, in Zagreb County."
+      },
+      {
+        "hr": "U blizini je dvorac Lužnica i parkovi uz Savu.",
+        "en": "Nearby are Lužnica Castle and parks along the Sava."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "djakovo",
+    "name": {
+      "hr": "Đakovo",
+      "en": "Đakovo"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.309,
+    "lon": 18.41,
+    "facts": [
+      {
+        "hr": "Poznat po katedrali sv. Petra.",
+        "en": "Known for St. Peter's Cathedral."
+      },
+      {
+        "hr": "Leži u Slavoniji, južno od Osijeka.",
+        "en": "Lies in Slavonia, south of Osijek."
+      },
+      {
+        "hr": "Sjedište je đakovačko-osječke nadbiskupije.",
+        "en": "Seat of the Đakovo-Osijek Archdiocese."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "DJ"
+  },
+  {
+    "id": "sinj",
+    "name": {
+      "hr": "Sinj",
+      "en": "Sinj"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.7,
+    "lon": 16.63,
+    "facts": [
+      {
+        "hr": "Grad u Cetinskoj krajini, poznat po Sinjskoj alki.",
+        "en": "Town in the Cetina region, known for the Sinj Alka."
+      },
+      {
+        "hr": "Leži u zaleđu Splita, uz rijeku Cetinu.",
+        "en": "Lies inland from Split, by the Cetina river."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vukovar",
+    "name": {
+      "hr": "Vukovar",
+      "en": "Vukovar"
+    },
+    "isOfficialCity": true,
+    "countyId": "vsz",
+    "lat": 45.352,
+    "lon": 19.002,
+    "facts": [
+      {
+        "hr": "Središte Vukovarsko-srijemske županije.",
+        "en": "Seat of Vukovar-Srijem County."
+      },
+      {
+        "hr": "Leži na Dunavu, blizu granice s Srbijom.",
+        "en": "Lies on the Danube, near the border with Serbia."
+      },
+      {
+        "hr": "Važno povijesno i kulturno središte istočne Slavonije.",
+        "en": "An important historical and cultural centre of eastern Slavonia."
+      },
+      {
+        "hr": "U blizini je ušće Vuke u Dunav.",
+        "en": "Near the confluence of the Vuka and the Danube."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "VU"
+  },
+  {
+    "id": "pozega",
+    "name": {
+      "hr": "Požega",
+      "en": "Požega"
+    },
+    "isOfficialCity": true,
+    "countyId": "psz",
+    "lat": 45.34,
+    "lon": 17.685,
+    "facts": [
+      {
+        "hr": "Leži u Požeškoj kotlini.",
+        "en": "Lies in the Požega valley."
+      },
+      {
+        "hr": "Okružena brdima i vinogradima.",
+        "en": "Surrounded by hills and vineyards."
+      },
+      {
+        "hr": "Središte Požeško-slavonske županije.",
+        "en": "Seat of Požega-Slavonia County."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "PŽ"
+  },
+  {
+    "id": "petrinja",
+    "name": {
+      "hr": "Petrinja",
+      "en": "Petrinja"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.44,
+    "lon": 16.284,
+    "facts": [
+      {
+        "hr": "Grad južno od Siska, u Sisačko-moslavačkoj županiji.",
+        "en": "Town south of Sisak, in Sisak-Moslavina County."
+      },
+      {
+        "hr": "Leži uz rijeku Petrinjčicu, blizu Kupe.",
+        "en": "Lies by the Petrinjčica river, near the Kupa."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "kutina",
+    "name": {
+      "hr": "Kutina",
+      "en": "Kutina"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.475,
+    "lon": 16.782,
+    "facts": [
+      {
+        "hr": "Grad u Moslavini, u Sisačko-moslavačkoj županiji.",
+        "en": "Town in Moslavina, in Sisak-Moslavina County."
+      },
+      {
+        "hr": "Poznat po petrokemijskoj industriji.",
+        "en": "Known for the petrochemical industry."
+      },
+      {
+        "hr": "Leži uz cestovni i željeznički koridor prema Slavoniji.",
+        "en": "Lies on the road and rail corridor toward Slavonia."
+      }
+    ],
+    "region": {
+      "hr": "Moslavina",
+      "en": "Moslavina"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "KT"
+  },
+  {
+    "id": "virovitica",
+    "name": {
+      "hr": "Virovitica",
+      "en": "Virovitica"
+    },
+    "isOfficialCity": true,
+    "countyId": "vpz",
+    "lat": 45.832,
+    "lon": 17.384,
+    "facts": [
+      {
+        "hr": "Grad u Podravini blizu Drave.",
+        "en": "A Podravina city near the Drava."
+      },
+      {
+        "hr": "Poznat po dvorcu Pejačević.",
+        "en": "Known for Pejačević Castle."
+      },
+      {
+        "hr": "Središte Virovitičko-podravske županije.",
+        "en": "Seat of Virovitica-Podravina County."
+      }
+    ],
+    "region": {
+      "hr": "Podravina",
+      "en": "Podravina"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "VT"
+  },
+  {
+    "id": "krizevci",
+    "name": {
+      "hr": "Križevci",
+      "en": "Križevci"
+    },
+    "isOfficialCity": true,
+    "countyId": "ksz",
+    "lat": 46.022,
+    "lon": 16.547,
+    "facts": [
+      {
+        "hr": "Jedan od najstarijih gradova u sjevernoj Hrvatskoj.",
+        "en": "One of the oldest towns in northern Croatia."
+      },
+      {
+        "hr": "Leži između Koprivnice i Bjelovara, u Prigorju.",
+        "en": "Lies between Koprivnica and Bjelovar, in Prigorje."
+      },
+      {
+        "hr": "Poznat po crkvenoj baštini i sajmovima.",
+        "en": "Known for church heritage and fairs."
+      }
+    ],
+    "region": {
+      "hr": "Prigorje",
+      "en": "Prigorje"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "KŽ"
+  },
+  {
+    "id": "sveta-nedelja",
+    "name": {
+      "hr": "Sveta Nedelja",
+      "en": "Sveta Nedelja"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.797,
+    "lon": 15.776,
+    "facts": [
+      {
+        "hr": "Grad zapadno od Zagreba, u Zagrebačkoj županiji.",
+        "en": "Town west of Zagreb, in Zagreb County."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "dugo-selo",
+    "name": {
+      "hr": "Dugo Selo",
+      "en": "Dugo Selo"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.806,
+    "lon": 16.238,
+    "facts": [
+      {
+        "hr": "Grad istočno od Zagreba, uz željeznički pravac prema Slavoniji.",
+        "en": "Town east of Zagreb, on the railway toward Slavonia."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "porec",
+    "name": {
+      "hr": "Poreč",
+      "en": "Poreč"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.227,
+    "lon": 13.595,
+    "facts": [
+      {
+        "hr": "Važno turističko središte zapadne Istre.",
+        "en": "An important tourist centre of western Istria."
+      },
+      {
+        "hr": "Poznat po Eufrazijevoj bazilici, UNESCO baštini.",
+        "en": "Known for the Euphrasian Basilica, a UNESCO site."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "metkovic",
+    "name": {
+      "hr": "Metković",
+      "en": "Metković"
+    },
+    "isOfficialCity": true,
+    "countyId": "dnz",
+    "lat": 43.05,
+    "lon": 17.63,
+    "facts": [
+      {
+        "hr": "Grad u delti Neretve, u Dubrovačko-neretvanskoj županiji.",
+        "en": "Town in the Neretva delta, in Dubrovnik-Neretva County."
+      },
+      {
+        "hr": "Važan cestovni i riječni čvor prema BiH.",
+        "en": "An important road and river hub toward BiH."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "sveti-ivan-zelina",
+    "name": {
+      "hr": "Sveti Ivan Zelina",
+      "en": "Sveti Ivan Zelina"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.96,
+    "lon": 16.243,
+    "facts": [
+      {
+        "hr": "Grad sjeveroistočno od Zagreba, u vinorodnom Prigorju.",
+        "en": "Town northeast of Zagreb, in the wine-growing Prigorje."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "jastrebarsko",
+    "name": {
+      "hr": "Jastrebarsko",
+      "en": "Jastrebarsko"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.672,
+    "lon": 15.651,
+    "facts": [
+      {
+        "hr": "Grad jugozapadno od Zagreba, na rubu Žumberka i Turopolja.",
+        "en": "Town southwest of Zagreb, on the edge of Žumberak and Turopolje."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "nasice",
+    "name": {
+      "hr": "Našice",
+      "en": "Našice"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.489,
+    "lon": 18.088,
+    "facts": [
+      {
+        "hr": "Grad u zapadnoj Slavoniji, u Osječko-baranjskoj županiji.",
+        "en": "Town in western Slavonia, in Osijek-Baranja County."
+      },
+      {
+        "hr": "Poznat po dvorcu Pejačević.",
+        "en": "Known for Pejačević Castle."
+      },
+      {
+        "hr": "Okružen je šumama i poljoprivrednim predjelima.",
+        "en": "Surrounded by forests and farmland."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "NA"
+  },
+  {
+    "id": "omis",
+    "name": {
+      "hr": "Omiš",
+      "en": "Omiš"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.443,
+    "lon": 16.693,
+    "facts": [
+      {
+        "hr": "Grad na ušću Cetine u more, istočno od Splita.",
+        "en": "Town at the mouth of the Cetina, east of Split."
+      },
+      {
+        "hr": "Poznat po kanjonu Cetine i piratskoj povijesti.",
+        "en": "Known for the Cetina canyon and its pirate history."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "makarska",
+    "name": {
+      "hr": "Makarska",
+      "en": "Makarska"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.297,
+    "lon": 17.018,
+    "facts": [
+      {
+        "hr": "Turističko središte Makarske rivijere.",
+        "en": "Tourist centre of the Makarska Riviera."
+      },
+      {
+        "hr": "Leži pod Biokovom, uz Jadransko more.",
+        "en": "Lies beneath Biokovo mountain, on the Adriatic."
+      },
+      {
+        "hr": "Važna luka i polazište za otoke Brač i Hvar.",
+        "en": "An important harbour and gateway toward Brač and Hvar."
+      }
+    ],
+    "region": {
+      "hr": "Dalmacija",
+      "en": "Dalmatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "MA"
+  },
+  {
+    "id": "ivanic-grad",
+    "name": {
+      "hr": "Ivanić-Grad",
+      "en": "Ivanić-Grad"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.707,
+    "lon": 16.396,
+    "facts": [
+      {
+        "hr": "Grad istočno od Zagreba, u Lonjskom polju / Posavini.",
+        "en": "Town east of Zagreb, in the Lonjsko Polje / Posavina area."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vrbovec",
+    "name": {
+      "hr": "Vrbovec",
+      "en": "Vrbovec"
+    },
+    "isOfficialCity": true,
+    "countyId": "zgz",
+    "lat": 45.884,
+    "lon": 16.417,
+    "facts": [
+      {
+        "hr": "Grad sjeveroistočno od Zagreba, poznat po prehrambenoj industriji.",
+        "en": "Town northeast of Zagreb, known for the food industry."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "rovinj",
+    "name": {
+      "hr": "Rovinj",
+      "en": "Rovinj"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.081,
+    "lon": 13.639,
+    "facts": [
+      {
+        "hr": "Slikoviti istarski grad na poluotoku uz more.",
+        "en": "A scenic Istrian town on a peninsula by the sea."
+      },
+      {
+        "hr": "Poznat po staroj jezgri i otoku Sv. Katarine.",
+        "en": "Known for its old town and St. Catherine Island."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "ivanec",
+    "name": {
+      "hr": "Ivanec",
+      "en": "Ivanec"
+    },
+    "isOfficialCity": true,
+    "countyId": "vaz",
+    "lat": 46.229,
+    "lon": 16.127,
+    "facts": [
+      {
+        "hr": "Grad u Varaždinskoj županiji, u Hrvatskom Zagorju.",
+        "en": "Town in Varaždin County, in Hrvatsko Zagorje."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "umag",
+    "name": {
+      "hr": "Umag",
+      "en": "Umag"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.437,
+    "lon": 13.526,
+    "facts": [
+      {
+        "hr": "Grad na sjeverozapadu Istre, blizu granice sa Slovenijom.",
+        "en": "Town in northwestern Istria, near the Slovenian border."
+      },
+      {
+        "hr": "Poznat po turizmu i teniskim turnirima.",
+        "en": "Known for tourism and tennis tournaments."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "trogir",
+    "name": {
+      "hr": "Trogir",
+      "en": "Trogir"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.516,
+    "lon": 16.25,
+    "facts": [
+      {
+        "hr": "Povijesni grad-otok između Splita i Kaštela.",
+        "en": "A historic island-town between Split and Kaštela."
+      },
+      {
+        "hr": "Stara jezgra je pod zaštitom UNESCO-a.",
+        "en": "The old town is a UNESCO World Heritage site."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "ogulin",
+    "name": {
+      "hr": "Ogulin",
+      "en": "Ogulin"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz",
+    "lat": 45.267,
+    "lon": 15.229,
+    "facts": [
+      {
+        "hr": "Grad na rubu Like i Gorskog kotara.",
+        "en": "Town on the edge of Lika and Gorski Kotar."
+      },
+      {
+        "hr": "Poznat po Frankopanskoj utvrdi i kanjonu Đulinog ponora.",
+        "en": "Known for the Frankopan fortress and Đula's abyss canyon."
+      },
+      {
+        "hr": "Leži uz željeznički pravac Zagreb–Rijeka.",
+        "en": "Lies on the Zagreb–Rijeka railway line."
+      }
+    ],
+    "region": {
+      "hr": "Središnja Hrvatska",
+      "en": "Central Croatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "OG"
+  },
+  {
+    "id": "novi-marof",
+    "name": {
+      "hr": "Novi Marof",
+      "en": "Novi Marof"
+    },
+    "isOfficialCity": true,
+    "countyId": "vaz",
+    "lat": 46.167,
+    "lon": 16.335,
+    "facts": [
+      {
+        "hr": "Grad južno od Varaždina, u Hrvatskom Zagorju.",
+        "en": "Town south of Varaždin, in Hrvatsko Zagorje."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "nova-gradiska",
+    "name": {
+      "hr": "Nova Gradiška",
+      "en": "Nova Gradiška"
+    },
+    "isOfficialCity": true,
+    "countyId": "bpz",
+    "lat": 45.255,
+    "lon": 17.383,
+    "facts": [
+      {
+        "hr": "Grad u zapadnoj Slavoniji, u Brodsko-posavskoj županiji.",
+        "en": "Town in western Slavonia, in Brod-Posavina County."
+      },
+      {
+        "hr": "Leži blizu Save i autoceste A3.",
+        "en": "Lies near the Sava and the A3 motorway."
+      },
+      {
+        "hr": "Regionalno središte Posavine zapadno od Slavonskog Broda.",
+        "en": "A regional centre of Posavina west of Slavonski Brod."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "NG"
+  },
+  {
+    "id": "knin",
+    "name": {
+      "hr": "Knin",
+      "en": "Knin"
+    },
+    "isOfficialCity": true,
+    "countyId": "szz",
+    "lat": 44.04,
+    "lon": 16.2,
+    "facts": [
+      {
+        "hr": "Grad u zaleđu Šibenika, uz rijeku Krku.",
+        "en": "Town in the hinterland of Šibenik, by the Krka river."
+      },
+      {
+        "hr": "Povijesno je važno središte dinarskog prostora sjeverne Dalmacije.",
+        "en": "Historically an important centre of the Dinaric hinterland of northern Dalmatia."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "krapina",
+    "name": {
+      "hr": "Krapina",
+      "en": "Krapina"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 46.161,
+    "lon": 15.879,
+    "facts": [
+      {
+        "hr": "Središte Krapinsko-zagorske županije.",
+        "en": "Seat of Krapina-Zagorje County."
+      },
+      {
+        "hr": "Poznata po nalazištu neandertalaca na Hušnjakovu.",
+        "en": "Known for the Neanderthal site at Hušnjakovo."
+      },
+      {
+        "hr": "Leži u Hrvatskom Zagorju, sjeverno od Zagreba.",
+        "en": "Lies in Hrvatsko Zagorje, north of Zagreb."
+      }
+    ],
+    "region": {
+      "hr": "Hrvatsko Zagorje",
+      "en": "Hrvatsko Zagorje"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "KR"
+  },
+  {
+    "id": "slatina",
+    "name": {
+      "hr": "Slatina",
+      "en": "Slatina"
+    },
+    "isOfficialCity": true,
+    "countyId": "vpz",
+    "lat": 45.703,
+    "lon": 17.701,
+    "facts": [
+      {
+        "hr": "Grad u Podravini, u Virovitičko-podravskoj županiji.",
+        "en": "Town in Podravina, in Virovitica-Podravina County."
+      },
+      {
+        "hr": "Leži južno od rijeke Drave.",
+        "en": "Lies south of the Drava river."
+      },
+      {
+        "hr": "Poznat po poljoprivredi i drvnoj industriji.",
+        "en": "Known for agriculture and the wood industry."
+      }
+    ],
+    "region": {
+      "hr": "Podravina",
+      "en": "Podravina"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "SL"
+  },
+  {
+    "id": "gospic",
+    "name": {
+      "hr": "Gospić",
+      "en": "Gospić"
+    },
+    "isOfficialCity": true,
+    "countyId": "lsz",
+    "lat": 44.546,
+    "lon": 15.375,
+    "facts": [
+      {
+        "hr": "Središte Like.",
+        "en": "The centre of Lika."
+      },
+      {
+        "hr": "U blizini su Nacionalni park Plitvička jezera i Velebit.",
+        "en": "Near Plitvice Lakes National Park and Velebit."
+      },
+      {
+        "hr": "Središte Ličko-senjske županije u dinarskom gorskom prostoru.",
+        "en": "Seat of Lika-Senj County in the Dinaric highland area."
+      }
+    ],
+    "region": {
+      "hr": "Lika",
+      "en": "Lika"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "GS"
+  },
+  {
+    "id": "novska",
+    "name": {
+      "hr": "Novska",
+      "en": "Novska"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.34,
+    "lon": 16.979,
+    "facts": [
+      {
+        "hr": "Grad u Posavini, uz autocestu A3 između Zagreba i Slavonije.",
+        "en": "Town in Posavina, on the A3 motorway between Zagreb and Slavonia."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "opatija",
+    "name": {
+      "hr": "Opatija",
+      "en": "Opatija"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.338,
+    "lon": 14.305,
+    "facts": [
+      {
+        "hr": "Poznato turističko odredište na Kvarneru, zapadno od Rijeke.",
+        "en": "A famous tourist destination on Kvarner, west of Rijeka."
+      },
+      {
+        "hr": "Razvila se kao lječilište i ljetovalište u 19. stoljeću.",
+        "en": "Developed as a spa and resort in the 19th century."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "labin",
+    "name": {
+      "hr": "Labin",
+      "en": "Labin"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.092,
+    "lon": 14.124,
+    "facts": [
+      {
+        "hr": "Grad u istočnoj Istri, nekad poznat po rudarstvu.",
+        "en": "Town in eastern Istria, formerly known for mining."
+      },
+      {
+        "hr": "Stari Labin leži na brijegu iznad Raške.",
+        "en": "Old Labin sits on a hill above the Raša valley."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "popovaca",
+    "name": {
+      "hr": "Popovača",
+      "en": "Popovača"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.571,
+    "lon": 16.627,
+    "facts": [
+      {
+        "hr": "Grad u Moslavini, blizu Lonjskog polja.",
+        "en": "Town in Moslavina, near Lonjsko Polje Nature Park."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "duga-resa",
+    "name": {
+      "hr": "Duga Resa",
+      "en": "Duga Resa"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz",
+    "lat": 45.445,
+    "lon": 15.503,
+    "facts": [
+      {
+        "hr": "Grad uz rijeku Mrežnicu, jugozapadno od Karlovca.",
+        "en": "Town on the Mrežnica river, southwest of Karlovac."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "kastav",
+    "name": {
+      "hr": "Kastav",
+      "en": "Kastav"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.372,
+    "lon": 14.35,
+    "facts": [
+      {
+        "hr": "Povijesni gradić na brijegu iznad Rijeke i Kvarnera.",
+        "en": "A historic hill town above Rijeka and Kvarner."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "daruvar",
+    "name": {
+      "hr": "Daruvar",
+      "en": "Daruvar"
+    },
+    "isOfficialCity": true,
+    "countyId": "bbz",
+    "lat": 45.593,
+    "lon": 17.225,
+    "facts": [
+      {
+        "hr": "Grad u Bilogori, poznat po termalnim izvorima.",
+        "en": "Town in Bilogora, known for thermal springs."
+      },
+      {
+        "hr": "Leži u Bjelovarsko-bilogorskoj županiji.",
+        "en": "Lies in Bjelovar-Bilogora County."
+      },
+      {
+        "hr": "Povijesno je višekulturno središte područja.",
+        "en": "Historically a multicultural centre of the area."
+      }
+    ],
+    "region": {
+      "hr": "Bilogora",
+      "en": "Bilogora"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "DA"
+  },
+  {
+    "id": "crikvenica",
+    "name": {
+      "hr": "Crikvenica",
+      "en": "Crikvenica"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.172,
+    "lon": 14.693,
+    "facts": [
+      {
+        "hr": "Turistički grad na sjevernom Kvarneru.",
+        "en": "A tourist town on northern Kvarner."
+      },
+      {
+        "hr": "Leži nasuprot otoka Krka.",
+        "en": "Lies opposite the island of Krk."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "valpovo",
+    "name": {
+      "hr": "Valpovo",
+      "en": "Valpovo"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.659,
+    "lon": 18.415,
+    "facts": [
+      {
+        "hr": "Grad sjeverno od Osijeka, uz rijeku Karašicu.",
+        "en": "Town north of Osijek, by the Karašica river."
+      },
+      {
+        "hr": "Poznat po baroknom dvorcu Prandau-Normann.",
+        "en": "Known for the Baroque Prandau-Normann castle."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "benkovac",
+    "name": {
+      "hr": "Benkovac",
+      "en": "Benkovac"
+    },
+    "isOfficialCity": true,
+    "countyId": "zdz",
+    "lat": 44.03,
+    "lon": 15.61,
+    "facts": [
+      {
+        "hr": "Grad u Ravnim kotarima, u zaleđu Zadra.",
+        "en": "Town in Ravni Kotari, in the hinterland of Zadar."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "imotski",
+    "name": {
+      "hr": "Imotski",
+      "en": "Imotski"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.447,
+    "lon": 17.217,
+    "facts": [
+      {
+        "hr": "Grad u zagori Splitsko-dalmatinske županije.",
+        "en": "Town in the hinterland of Split-Dalmatia County."
+      },
+      {
+        "hr": "Poznat po Crvenom i Modrom jezeru.",
+        "en": "Known for Red Lake and Blue Lake."
+      },
+      {
+        "hr": "Leži blizu granice s Bosnom i Hercegovinom.",
+        "en": "Lies near the border with Bosnia and Herzegovina."
+      }
+    ],
+    "region": {
+      "hr": "Dalmacija",
+      "en": "Dalmatia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "IM"
+  },
+  {
+    "id": "zupanja",
+    "name": {
+      "hr": "Županja",
+      "en": "Županja"
+    },
+    "isOfficialCity": true,
+    "countyId": "vsz",
+    "lat": 45.078,
+    "lon": 18.698,
+    "facts": [
+      {
+        "hr": "Grad u Posavini, u Vukovarsko-srijemskoj županiji.",
+        "en": "Town in Posavina, in Vukovar-Srijem County."
+      },
+      {
+        "hr": "Leži blizu Save i granice s BiH.",
+        "en": "Lies near the Sava and the border with BiH."
+      },
+      {
+        "hr": "Važno lokalno središte jugoistočne Slavonije.",
+        "en": "An important local centre of southeastern Slavonia."
+      }
+    ],
+    "region": {
+      "hr": "Slavonija",
+      "en": "Slavonia"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "ŽU"
+  },
+  {
+    "id": "pleternica",
+    "name": {
+      "hr": "Pleternica",
+      "en": "Pleternica"
+    },
+    "isOfficialCity": true,
+    "countyId": "psz",
+    "lat": 45.286,
+    "lon": 17.802,
+    "facts": [
+      {
+        "hr": "Grad u Požeškoj kotlini, istočno od Požege.",
+        "en": "Town in the Požega valley, east of Požega."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "belisce",
+    "name": {
+      "hr": "Belišće",
+      "en": "Belišće"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.684,
+    "lon": 18.402,
+    "facts": [
+      {
+        "hr": "Grad uz Dravu, sjeverozapadno od Osijeka.",
+        "en": "Town on the Drava, northwest of Osijek."
+      },
+      {
+        "hr": "Poznat po industriji papira i drveta.",
+        "en": "Known for paper and wood industry."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "zabok",
+    "name": {
+      "hr": "Zabok",
+      "en": "Zabok"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 46.026,
+    "lon": 15.904,
+    "facts": [
+      {
+        "hr": "Grad u Hrvatskom Zagorju, južno od Krapine.",
+        "en": "Town in Hrvatsko Zagorje, south of Krapina."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vodice",
+    "name": {
+      "hr": "Vodice",
+      "en": "Vodice"
+    },
+    "isOfficialCity": true,
+    "countyId": "szz",
+    "lat": 43.761,
+    "lon": 15.779,
+    "facts": [
+      {
+        "hr": "Turističko naselje sjeverno od Šibenika, uz Jadran.",
+        "en": "A tourist town north of Šibenik, on the Adriatic."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "garesnica",
+    "name": {
+      "hr": "Garešnica",
+      "en": "Garešnica"
+    },
+    "isOfficialCity": true,
+    "countyId": "bbz",
+    "lat": 45.574,
+    "lon": 16.941,
+    "facts": [
+      {
+        "hr": "Grad u Bilogori, južno od Bjelovara.",
+        "en": "Town in Bilogora, south of Bjelovar."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "ludbreg",
+    "name": {
+      "hr": "Ludbreg",
+      "en": "Ludbreg"
+    },
+    "isOfficialCity": true,
+    "countyId": "vaz",
+    "lat": 46.253,
+    "lon": 16.616,
+    "facts": [
+      {
+        "hr": "Grad u Podravini, poznat kao „središte svijeta” po lokalnoj tradiciji.",
+        "en": "Town in Podravina, known locally as the “centre of the world”."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "otocac",
+    "name": {
+      "hr": "Otočac",
+      "en": "Otočac"
+    },
+    "isOfficialCity": true,
+    "countyId": "lsz",
+    "lat": 44.87,
+    "lon": 15.241,
+    "facts": [
+      {
+        "hr": "Grad u Lici, uz rijeku Gacku.",
+        "en": "Town in Lika, by the Gacka river."
+      },
+      {
+        "hr": "Leži na cesti između Zagreba i mora preko Like.",
+        "en": "Lies on the inland route through Lika between Zagreb and the sea."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "pazin",
+    "name": {
+      "hr": "Pazin",
+      "en": "Pazin"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.24,
+    "lon": 13.94,
+    "facts": [
+      {
+        "hr": "Upravno središte Istarske županije.",
+        "en": "Administrative seat of Istria County."
+      },
+      {
+        "hr": "Leži u unutrašnjosti Istre, iznad Pazinske jame.",
+        "en": "Lies in inland Istria, above the Pazin Cave gorge."
+      },
+      {
+        "hr": "Poznat po srednjovjekovnoj utvrdi iznad provalije.",
+        "en": "Known for a medieval fortress above a deep gorge."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "ploce",
+    "name": {
+      "hr": "Ploče",
+      "en": "Ploče"
+    },
+    "isOfficialCity": true,
+    "countyId": "dnz",
+    "lat": 43.05,
+    "lon": 17.43,
+    "facts": [
+      {
+        "hr": "Važna teretna luka na ušću Neretve.",
+        "en": "An important cargo port at the mouth of the Neretva."
+      },
+      {
+        "hr": "Povezuje Jadran s BiH željeznicom i cestom.",
+        "en": "Links the Adriatic with BiH by rail and road."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "trilj",
+    "name": {
+      "hr": "Trilj",
+      "en": "Trilj"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.619,
+    "lon": 16.724,
+    "facts": [
+      {
+        "hr": "Grad uz Cetinu, u zaleđu Splita.",
+        "en": "Town on the Cetina, in the hinterland of Split."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "donji-miholjac",
+    "name": {
+      "hr": "Donji Miholjac",
+      "en": "Donji Miholjac"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.762,
+    "lon": 18.165,
+    "facts": [
+      {
+        "hr": "Grad uz Dravu, na sjeveru Osječko-baranjske županije.",
+        "en": "Town on the Drava, in northern Osijek-Baranja County."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "beli-manastir",
+    "name": {
+      "hr": "Beli Manastir",
+      "en": "Beli Manastir"
+    },
+    "isOfficialCity": true,
+    "countyId": "obz",
+    "lat": 45.77,
+    "lon": 18.607,
+    "facts": [
+      {
+        "hr": "Najveće naselje u Baranji.",
+        "en": "The largest settlement in Baranja."
+      },
+      {
+        "hr": "Leži između Drave i Dunava, sjeverno od Osijeka.",
+        "en": "Lies between the Drava and Danube, north of Osijek."
+      },
+      {
+        "hr": "Područje je poznato po vinogradima i plodnoj ravnici.",
+        "en": "The area is known for vineyards and fertile plains."
+      }
+    ],
+    "region": {
+      "hr": "Baranja",
+      "en": "Baranja"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "BM"
+  },
+  {
+    "id": "bakar",
+    "name": {
+      "hr": "Bakar",
+      "en": "Bakar"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.307,
+    "lon": 14.534,
+    "facts": [
+      {
+        "hr": "Luka i gradić u Bakarskom zaljevu, istočno od Rijeke.",
+        "en": "A harbour town in Bakar Bay, east of Rijeka."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "mali-losinj",
+    "name": {
+      "hr": "Mali Lošinj",
+      "en": "Mali Lošinj"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 44.533,
+    "lon": 14.467,
+    "facts": [
+      {
+        "hr": "Najveće naselje na otoku Lošinju.",
+        "en": "The largest settlement on the island of Lošinj."
+      },
+      {
+        "hr": "Poznat po turizmu i blagoj klimi Kvarnera.",
+        "en": "Known for tourism and the mild Kvarner climate."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "djurdjevac",
+    "name": {
+      "hr": "Đurđevac",
+      "en": "Đurđevac"
+    },
+    "isOfficialCity": true,
+    "countyId": "ksz",
+    "lat": 46.04,
+    "lon": 17.071,
+    "facts": [
+      {
+        "hr": "Grad u Podravini, istočno od Koprivnice.",
+        "en": "Town in Podravina, east of Koprivnica."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "rab",
+    "name": {
+      "hr": "Rab",
+      "en": "Rab"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 44.76,
+    "lon": 14.77,
+    "facts": [
+      {
+        "hr": "Grad i otok u Kvarneru, poznat po srednjovjekovnoj silueti.",
+        "en": "Town and island in Kvarner, known for its medieval skyline."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "glina",
+    "name": {
+      "hr": "Glina",
+      "en": "Glina"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.338,
+    "lon": 16.091,
+    "facts": [
+      {
+        "hr": "Grad u Banovini, južno od Petrinje.",
+        "en": "Town in Banovina, south of Petrinja."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "pakrac",
+    "name": {
+      "hr": "Pakrac",
+      "en": "Pakrac"
+    },
+    "isOfficialCity": true,
+    "countyId": "psz",
+    "lat": 45.439,
+    "lon": 17.192,
+    "facts": [
+      {
+        "hr": "Grad u zapadnoj Slavoniji, u Požeško-slavonskoj županiji.",
+        "en": "Town in western Slavonia, in Požega-Slavonia County."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "prelog",
+    "name": {
+      "hr": "Prelog",
+      "en": "Prelog"
+    },
+    "isOfficialCity": true,
+    "countyId": "mez",
+    "lat": 46.337,
+    "lon": 16.615,
+    "facts": [
+      {
+        "hr": "Grad u Međimurju, blizu rijeke Drave.",
+        "en": "Town in Međimurje, near the Drava river."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "lepoglava",
+    "name": {
+      "hr": "Lepoglava",
+      "en": "Lepoglava"
+    },
+    "isOfficialCity": true,
+    "countyId": "vaz",
+    "lat": 46.207,
+    "lon": 16.044,
+    "facts": [
+      {
+        "hr": "Grad u Zagorju, poznat po čipki i pavlinskoj baštini.",
+        "en": "Town in Zagorje, known for lace and Pauline heritage."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "cazma",
+    "name": {
+      "hr": "Čazma",
+      "en": "Čazma"
+    },
+    "isOfficialCity": true,
+    "countyId": "bbz",
+    "lat": 45.749,
+    "lon": 16.613,
+    "facts": [
+      {
+        "hr": "Grad jugozapadno od Bjelovara, u bilogorsko-moslavačkom prostoru.",
+        "en": "Town southwest of Bjelovar, in the Bilogora–Moslavina area."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "krk",
+    "name": {
+      "hr": "Krk",
+      "en": "Krk"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.03,
+    "lon": 14.58,
+    "facts": [
+      {
+        "hr": "Grad na otoku Krku, najvećem hrvatskom otoku.",
+        "en": "Town on Krk, Croatia's largest island."
+      },
+      {
+        "hr": "Povezan je s kopnom mostom preko Tiplog kanala.",
+        "en": "Linked to the mainland by a bridge over the Tihi Channel."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "drnis",
+    "name": {
+      "hr": "Drniš",
+      "en": "Drniš"
+    },
+    "isOfficialCity": true,
+    "countyId": "szz",
+    "lat": 43.86,
+    "lon": 16.156,
+    "facts": [
+      {
+        "hr": "Grad u zagori Šibensko-kninske županije.",
+        "en": "Town in the hinterland of Šibenik-Knin County."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "buzet",
+    "name": {
+      "hr": "Buzet",
+      "en": "Buzet"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.408,
+    "lon": 13.965,
+    "facts": [
+      {
+        "hr": "Grad u sjevernoj Istri, poznat po tartufima.",
+        "en": "Town in northern Istria, known for truffles."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "senj",
+    "name": {
+      "hr": "Senj",
+      "en": "Senj"
+    },
+    "isOfficialCity": true,
+    "countyId": "lsz",
+    "lat": 44.99,
+    "lon": 14.91,
+    "facts": [
+      {
+        "hr": "Povijesna luka pod Velebitom, na putu prema Lici.",
+        "en": "A historic port beneath Velebit, on the route toward Lika."
+      },
+      {
+        "hr": "Poznat po uskočkoj tvrđavi Nehaj.",
+        "en": "Known for the Uskok fortress Nehaj."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "pregrada",
+    "name": {
+      "hr": "Pregrada",
+      "en": "Pregrada"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 46.165,
+    "lon": 15.751,
+    "facts": [
+      {
+        "hr": "Grad u Hrvatskom Zagorju, zapadno od Krapine.",
+        "en": "Town in Hrvatsko Zagorje, west of Krapina."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "mursko-sredisce",
+    "name": {
+      "hr": "Mursko Središće",
+      "en": "Mursko Središće"
+    },
+    "isOfficialCity": true,
+    "countyId": "mez",
+    "lat": 46.513,
+    "lon": 16.439,
+    "facts": [
+      {
+        "hr": "Najsjeverniji grad u Hrvatskoj, uz rijeku Muru.",
+        "en": "The northernmost town in Croatia, on the Mura river."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vodnjan",
+    "name": {
+      "hr": "Vodnjan",
+      "en": "Vodnjan"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 44.961,
+    "lon": 13.853,
+    "facts": [
+      {
+        "hr": "Grad u južnoj Istri, blizu Pule.",
+        "en": "Town in southern Istria, near Pula."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "ozalj",
+    "name": {
+      "hr": "Ozalj",
+      "en": "Ozalj"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz",
+    "lat": 45.613,
+    "lon": 15.478,
+    "facts": [
+      {
+        "hr": "Grad uz rijeku Kupu, sjeverno od Karlovca.",
+        "en": "Town on the Kupa river, north of Karlovac."
+      },
+      {
+        "hr": "Poznat po starom gradu Ozalj.",
+        "en": "Known for Ozalj Castle."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "oroslavje",
+    "name": {
+      "hr": "Oroslavje",
+      "en": "Oroslavje"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 45.997,
+    "lon": 15.916,
+    "facts": [
+      {
+        "hr": "Grad u Hrvatskom Zagorju, blizu Donje Stubice.",
+        "en": "Town in Hrvatsko Zagorje, near Donja Stubica."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vrgorac",
+    "name": {
+      "hr": "Vrgorac",
+      "en": "Vrgorac"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.204,
+    "lon": 17.37,
+    "facts": [
+      {
+        "hr": "Grad u dalmatinskoj zagori, blizu granice s BiH.",
+        "en": "Town in the Dalmatian hinterland, near the BiH border."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "biograd-na-moru",
+    "name": {
+      "hr": "Biograd na Moru",
+      "en": "Biograd na Moru"
+    },
+    "isOfficialCity": true,
+    "countyId": "zdz",
+    "lat": 43.937,
+    "lon": 15.444,
+    "facts": [
+      {
+        "hr": "Grad na paškoj obali, južno od Zadra.",
+        "en": "Town on the coast opposite Pag, south of Zadar."
+      },
+      {
+        "hr": "Povijesno je bio krunidbeno mjesto hrvatskih kraljeva.",
+        "en": "Historically a coronation place of Croatian kings."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "zlatar",
+    "name": {
+      "hr": "Zlatar",
+      "en": "Zlatar"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 46.092,
+    "lon": 16.077,
+    "facts": [
+      {
+        "hr": "Grad u Hrvatskom Zagorju, istočno od Krapine.",
+        "en": "Town in Hrvatsko Zagorje, east of Krapina."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "varazdinske-toplice",
+    "name": {
+      "hr": "Varaždinske Toplice",
+      "en": "Varaždinske Toplice"
+    },
+    "isOfficialCity": true,
+    "countyId": "vaz",
+    "lat": 46.21,
+    "lon": 16.423,
+    "facts": [
+      {
+        "hr": "Najstarije lječilište u Hrvatskoj, južno od Varaždina.",
+        "en": "The oldest spa town in Croatia, south of Varaždin."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "korcula",
+    "name": {
+      "hr": "Korčula",
+      "en": "Korčula"
+    },
+    "isOfficialCity": true,
+    "countyId": "dnz",
+    "lat": 42.93,
+    "lon": 16.889,
+    "facts": [
+      {
+        "hr": "Grad na istoimenom otoku u južnoj Dalmaciji.",
+        "en": "Town on the island of the same name in southern Dalmatia."
+      },
+      {
+        "hr": "Poznat po srednjovjekovnim zidinama i Moreški.",
+        "en": "Known for medieval walls and the Moreška dance."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "grubisno-polje",
+    "name": {
+      "hr": "Grubišno Polje",
+      "en": "Grubišno Polje"
+    },
+    "isOfficialCity": true,
+    "countyId": "bbz",
+    "lat": 45.702,
+    "lon": 17.172,
+    "facts": [
+      {
+        "hr": "Grad u Bilogori, sjeveroistočno od Daruvara.",
+        "en": "Town in Bilogora, northeast of Daruvar."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "donja-stubica",
+    "name": {
+      "hr": "Donja Stubica",
+      "en": "Donja Stubica"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 45.98,
+    "lon": 15.973,
+    "facts": [
+      {
+        "hr": "Grad u Zagorju, povezan s seljačkom bunom 1573.",
+        "en": "Town in Zagorje, linked to the 1573 peasants' revolt."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "delnice",
+    "name": {
+      "hr": "Delnice",
+      "en": "Delnice"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.4,
+    "lon": 14.8,
+    "facts": [
+      {
+        "hr": "Najveće naselje Gorskog kotara.",
+        "en": "The largest settlement in Gorski Kotar."
+      },
+      {
+        "hr": "Leži u šumovitom dinarskom prostoru Primorsko-goranske županije.",
+        "en": "Lies in the forested Dinaric area of Primorje-Gorski Kotar County."
+      },
+      {
+        "hr": "Važna postaja na cesti i željeznici prema Rijeci.",
+        "en": "An important stop on the road and railway toward Rijeka."
+      }
+    ],
+    "region": {
+      "hr": "Gorski kotar",
+      "en": "Gorski Kotar"
+    },
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ],
+    "plateCode": "DE"
+  },
+  {
+    "id": "lipik",
+    "name": {
+      "hr": "Lipik",
+      "en": "Lipik"
+    },
+    "isOfficialCity": true,
+    "countyId": "psz",
+    "lat": 45.414,
+    "lon": 17.161,
+    "facts": [
+      {
+        "hr": "Lječilišni grad u zapadnoj Slavoniji, poznat po termalnoj vodi.",
+        "en": "A spa town in western Slavonia, known for thermal water."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "ilok",
+    "name": {
+      "hr": "Ilok",
+      "en": "Ilok"
+    },
+    "isOfficialCity": true,
+    "countyId": "vsz",
+    "lat": 45.222,
+    "lon": 19.375,
+    "facts": [
+      {
+        "hr": "Najistočniji grad Hrvatske, na Dunavu.",
+        "en": "The easternmost town in Croatia, on the Danube."
+      },
+      {
+        "hr": "Poznat po vinogradima i srednjovjekovnoj utvrdi.",
+        "en": "Known for vineyards and a medieval fortress."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "otok",
+    "name": {
+      "hr": "Otok",
+      "en": "Otok"
+    },
+    "isOfficialCity": true,
+    "countyId": "vsz",
+    "lat": 45.146,
+    "lon": 18.884,
+    "facts": [
+      {
+        "hr": "Grad u Vukovarsko-srijemskoj županiji, zapadno od Vinkovaca.",
+        "en": "Town in Vukovar-Srijem County, west of Vinkovci."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "kutjevo",
+    "name": {
+      "hr": "Kutjevo",
+      "en": "Kutjevo"
+    },
+    "isOfficialCity": true,
+    "countyId": "psz",
+    "lat": 45.426,
+    "lon": 17.883,
+    "facts": [
+      {
+        "hr": "Grad u Požeškoj kotlini, poznat po vinogradarstvu.",
+        "en": "Town in the Požega valley, known for winegrowing."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "orahovica",
+    "name": {
+      "hr": "Orahovica",
+      "en": "Orahovica"
+    },
+    "isOfficialCity": true,
+    "countyId": "vpz",
+    "lat": 45.529,
+    "lon": 17.88,
+    "facts": [
+      {
+        "hr": "Grad na rubu Papuka, u Virovitičko-podravskoj županiji.",
+        "en": "Town on the edge of Papuk, in Virovitica-Podravina County."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "buje",
+    "name": {
+      "hr": "Buje",
+      "en": "Buje"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.408,
+    "lon": 13.659,
+    "facts": [
+      {
+        "hr": "Grad u sjeverozapadnoj Istri, blizu granice sa Slovenijom.",
+        "en": "Town in northwestern Istria, near the Slovenian border."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "novi-vinodolski",
+    "name": {
+      "hr": "Novi Vinodolski",
+      "en": "Novi Vinodolski"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.128,
+    "lon": 14.79,
+    "facts": [
+      {
+        "hr": "Primorski grad južno od Crikvenice, poznat po Vinodolskom zakoniku.",
+        "en": "Coastal town south of Crikvenica, known for the Vinodol Code."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "supetar",
+    "name": {
+      "hr": "Supetar",
+      "en": "Supetar"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.383,
+    "lon": 16.556,
+    "facts": [
+      {
+        "hr": "Glavno naselje i luka otoka Brača.",
+        "en": "The main settlement and port of the island of Brač."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "slunj",
+    "name": {
+      "hr": "Slunj",
+      "en": "Slunj"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz",
+    "lat": 45.11,
+    "lon": 15.59,
+    "facts": [
+      {
+        "hr": "Grad uz rijeku Koranu, poznat po Rastokama.",
+        "en": "Town on the Korana river, known for Rastoke."
+      },
+      {
+        "hr": "Rastoke povezuju mlinove s slapovima prije Plitvica.",
+        "en": "Rastoke links watermills with cascades before Plitvice."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "kraljevica",
+    "name": {
+      "hr": "Kraljevica",
+      "en": "Kraljevica"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.275,
+    "lon": 14.572,
+    "facts": [
+      {
+        "hr": "Grad i luka na ulazu u Bakarski zaljev.",
+        "en": "Town and harbour at the entrance to Bakar Bay."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "hvar",
+    "name": {
+      "hr": "Hvar",
+      "en": "Hvar"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.154,
+    "lon": 16.653,
+    "facts": [
+      {
+        "hr": "Grad na otoku Hvaru, poznat po dugoj turističkoj tradiciji.",
+        "en": "Town on the island of Hvar, known for a long tourist tradition."
+      },
+      {
+        "hr": "Stara jezgra leži uz luku, ispod tvrđave Fortica.",
+        "en": "The old town sits by the harbour, below Fortica fortress."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "novigrad",
+    "name": {
+      "hr": "Novigrad",
+      "en": "Novigrad"
+    },
+    "isOfficialCity": true,
+    "countyId": "isz",
+    "lat": 45.316,
+    "lon": 13.562,
+    "facts": [
+      {
+        "hr": "Primorski gradić na zapadnoj obali Istre.",
+        "en": "A coastal town on the western shore of Istria."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vrbovsko",
+    "name": {
+      "hr": "Vrbovsko",
+      "en": "Vrbovsko"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.37,
+    "lon": 15.08,
+    "facts": [
+      {
+        "hr": "Grad u Gorskom kotaru, uz cestu Zagreb–Rijeka.",
+        "en": "Town in Gorski Kotar, on the Zagreb–Rijeka road."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "novalja",
+    "name": {
+      "hr": "Novalja",
+      "en": "Novalja"
+    },
+    "isOfficialCity": true,
+    "countyId": "lsz",
+    "lat": 44.556,
+    "lon": 14.885,
+    "facts": [
+      {
+        "hr": "Turističko središte na otoku Pagu.",
+        "en": "A tourist centre on the island of Pag."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "obrovac",
+    "name": {
+      "hr": "Obrovac",
+      "en": "Obrovac"
+    },
+    "isOfficialCity": true,
+    "countyId": "zdz",
+    "lat": 44.201,
+    "lon": 15.681,
+    "facts": [
+      {
+        "hr": "Grad uz rijeku Zrmanju, u zaleđu Zadra.",
+        "en": "Town on the Zrmanja river, in the hinterland of Zadar."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "skradin",
+    "name": {
+      "hr": "Skradin",
+      "en": "Skradin"
+    },
+    "isOfficialCity": true,
+    "countyId": "szz",
+    "lat": 43.818,
+    "lon": 15.923,
+    "facts": [
+      {
+        "hr": "Grad na Krki, ulazno mjesto prema Nacionalnom parku Krka.",
+        "en": "Town on the Krka, a gateway to Krka National Park."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "cabar",
+    "name": {
+      "hr": "Čabar",
+      "en": "Čabar"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 45.594,
+    "lon": 14.647,
+    "facts": [
+      {
+        "hr": "Grad u sjevernom Gorskom kotaru, blizu granice sa Slovenijom.",
+        "en": "Town in northern Gorski Kotar, near the Slovenian border."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "pag",
+    "name": {
+      "hr": "Pag",
+      "en": "Pag"
+    },
+    "isOfficialCity": true,
+    "countyId": "zdz",
+    "lat": 44.44,
+    "lon": 15.05,
+    "facts": [
+      {
+        "hr": "Grad na istoimenom otoku, poznat po soli i paškoj siru.",
+        "en": "Town on the island of the same name, known for salt and Pag cheese."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "opuzen",
+    "name": {
+      "hr": "Opuzen",
+      "en": "Opuzen"
+    },
+    "isOfficialCity": true,
+    "countyId": "dnz",
+    "lat": 43.017,
+    "lon": 17.564,
+    "facts": [
+      {
+        "hr": "Grad u dolini Neretve, sjeverno od Ploča.",
+        "en": "Town in the Neretva valley, north of Ploče."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "stari-grad",
+    "name": {
+      "hr": "Stari Grad",
+      "en": "Stari Grad"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.184,
+    "lon": 16.599,
+    "facts": [
+      {
+        "hr": "Jedno od najstarijih naselja na Jadranu, na otoku Hvaru.",
+        "en": "One of the oldest settlements on the Adriatic, on Hvar."
+      },
+      {
+        "hr": "Starogradsko polje je UNESCO kulturna baština.",
+        "en": "Stari Grad Plain is a UNESCO cultural landscape."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "cres",
+    "name": {
+      "hr": "Cres",
+      "en": "Cres"
+    },
+    "isOfficialCity": true,
+    "countyId": "pgz",
+    "lat": 44.961,
+    "lon": 14.408,
+    "facts": [
+      {
+        "hr": "Grad na otoku Cresu u Kvarneru.",
+        "en": "Town on the island of Cres in Kvarner."
+      },
+      {
+        "hr": "Otok je poznat po bjeloglavim supovima i Vranskom jezeru.",
+        "en": "The island is known for griffon vultures and Lake Vrana."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "nin",
+    "name": {
+      "hr": "Nin",
+      "en": "Nin"
+    },
+    "isOfficialCity": true,
+    "countyId": "zdz",
+    "lat": 44.242,
+    "lon": 15.184,
+    "facts": [
+      {
+        "hr": "Mali povijesni grad sjeverno od Zadra, nekad hrvatsko središte.",
+        "en": "A small historic town north of Zadar, once a Croatian centre."
+      },
+      {
+        "hr": "Poznat po crkvi sv. Križa i solanama.",
+        "en": "Known for the Church of the Holy Cross and salt pans."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "klanjec",
+    "name": {
+      "hr": "Klanjec",
+      "en": "Klanjec"
+    },
+    "isOfficialCity": true,
+    "countyId": "kzz2",
+    "lat": 46.051,
+    "lon": 15.744,
+    "facts": [
+      {
+        "hr": "Grad u Hrvatskom Zagorju, blizu Sutle i Slovenije.",
+        "en": "Town in Hrvatsko Zagorje, near the Sutla and Slovenia."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vis",
+    "name": {
+      "hr": "Vis",
+      "en": "Vis"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.059,
+    "lon": 16.195,
+    "facts": [
+      {
+        "hr": "Grad na otoku Visu, jednom od najudaljenijih hrvatskih otoka.",
+        "en": "Town on Vis, one of Croatia's more remote islands."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "hrvatska-kostajnica",
+    "name": {
+      "hr": "Hrvatska Kostajnica",
+      "en": "Hrvatska Kostajnica"
+    },
+    "isOfficialCity": true,
+    "countyId": "smz",
+    "lat": 45.228,
+    "lon": 16.54,
+    "facts": [
+      {
+        "hr": "Grad uz Unu, na granici s BiH, u Banovini.",
+        "en": "Town on the Una, on the BiH border, in Banovina."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "vrlika",
+    "name": {
+      "hr": "Vrlika",
+      "en": "Vrlika"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.909,
+    "lon": 16.4,
+    "facts": [
+      {
+        "hr": "Grad u dalmatinskoj zagori, uz izvor Cetine.",
+        "en": "Town in the Dalmatian hinterland, near the Cetina spring."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  },
+  {
+    "id": "komiza",
+    "name": {
+      "hr": "Komiža",
+      "en": "Komiža"
+    },
+    "isOfficialCity": true,
+    "countyId": "sdz",
+    "lat": 43.044,
+    "lon": 16.092,
+    "facts": [
+      {
+        "hr": "Ribarske luke na zapadnoj strani otoka Visa.",
+        "en": "A fishing town on the western side of Vis."
+      },
+      {
+        "hr": "Polazište je za Biševo i Modru špilju.",
+        "en": "A starting point for Biševo and the Blue Cave."
+      }
+    ],
+    "curriculumTags": [
+      "GEO-OS-A.5.4"
+    ]
+  }
+]

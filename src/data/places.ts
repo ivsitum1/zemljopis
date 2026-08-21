@@ -1,3 +1,5 @@
+import type { PlaceRecord } from './placeTypes'
+
 export type LocalizedText = { hr: string; en: string }
 
 export type PlaceCard = {
@@ -15,6 +17,24 @@ export type PlaceCard = {
   curriculumTags: string[]
   /** true = curated core; false = stub for later enrichment */
   curated: boolean
+}
+
+/** Thin catalogue → PlaceCard mapper for gradual mode migration. */
+export function asPlaceCard(p: PlaceRecord): PlaceCard {
+  return {
+    id: p.id,
+    name: p.name,
+    lat: p.lat,
+    lon: p.lon,
+    countyId: p.countyId,
+    region: p.region ?? { hr: '', en: '' },
+    facts: {
+      basic: p.facts.slice(0, 3),
+      advanced: p.facts.slice(3),
+    },
+    curriculumTags: p.curriculumTags ?? [],
+    curated: p.facts.length > 0,
+  }
 }
 
 /**

@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HOME_CITIES } from '../data/cities'
 import { setAppLanguage, type AppLanguage } from '../i18n'
@@ -9,11 +9,20 @@ type SetupScreenProps = {
   onSave: (profile: UserProfile) => void
 }
 
+function normalizeSearch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+}
+
 export function SetupScreen({ initial, onSave }: SetupScreenProps) {
   const { t, i18n } = useTranslation()
+  const language = i18n.language.startsWith('en') ? 'en' : 'hr'
   const [name, setName] = useState(initial?.name ?? '')
   const [homeCityId, setHomeCityId] = useState(initial?.homeCityId ?? HOME_CITIES[0]?.id ?? 'zagreb')
   const [level, setLevel] = useState<DifficultyLevel>(initial?.level ?? 2)
+  const [cityQuery, setCityQuery] = useState('')
 
   const cities = useMemo(
     () =>
@@ -23,10 +32,26 @@ export function SetupScreen({ initial, onSave }: SetupScreenProps) {
     [],
   )
 
+  const filteredCities = useMemo(() => {
+    const q = normalizeSearch(cityQuery.trim())
+    if (!q) return cities
+    return cities.filter((city) => {
+      const hr = normalizeSearch(city.name.hr)
+      const en = normalizeSearch(city.name.en)
+      return hr.includes(q) || en.includes(q)
+    })
+  }, [cities, cityQuery])
+
+  useEffect(() => {
+    if (filteredCities.length === 0) return
+    if (filteredCities.some((city) => city.id === homeCityId)) return
+    setHomeCityId(filteredCities[0]!.id)
+  }, [filteredCities, homeCityId])
+
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault()
     const trimmed = name.trim()
-    if (!trimmed) {
+    if (!trimmed || !homeCityId) {
       return
     }
 
@@ -37,8 +62,8 @@ export function SetupScreen({ initial, onSave }: SetupScreenProps) {
     })
   }
 
-  function handleLanguageChange(language: AppLanguage): void {
-    setAppLanguage(language)
+  function handleLanguageChange(next: AppLanguage): void {
+    setAppLanguage(next)
   }
 
   return (
@@ -58,16 +83,36 @@ export function SetupScreen({ initial, onSave }: SetupScreenProps) {
           />
         </label>
 
-        <label className="field">
+        <div className="field">
           <span>{t('setup.homeLabel')}</span>
-          <select value={homeCityId} onChange={(event) => setHomeCityId(event.target.value)}>
-            {cities.map((city) => (
-              <option key={city.id} value={city.id}>
-                {city.name[i18n.language === 'en' ? 'en' : 'hr']}
+          <input
+            type="search"
+            value={cityQuery}
+            onChange={(event) => setCityQuery(event.target.value)}
+            placeholder={t('setup.homeSearchPlaceholder')}
+            aria-label={t('setup.homeSearchPlaceholder')}
+            autoComplete="off"
+          />
+          <select
+            value={filteredCities.some((c) => c.id === homeCityId) ? homeCityId : ''}
+            onChange={(event) => setHomeCityId(event.target.value)}
+            size={Math.min(8, Math.max(4, filteredCities.length || 1))}
+            className="city-picker"
+            required
+          >
+            {filteredCities.length === 0 ? (
+              <option value="" disabled>
+                {t('setup.homeNoMatches')}
               </option>
-            ))}
+            ) : (
+              filteredCities.map((city) => (
+                <option key={city.id} value={city.id}>
+                  {city.name[language]}
+                </option>
+              ))
+            )}
           </select>
-        </label>
+        </div>
 
         <label className="field">
           <span>{t('setup.levelLabel')}</span>
@@ -94,7 +139,7 @@ export function SetupScreen({ initial, onSave }: SetupScreenProps) {
           </select>
         </label>
 
-        <button type="submit" className="primary">
+        <button type="submit" className="primary" disabled={!homeCityId || filteredCities.length === 0}>
           {t('setup.save')}
         </button>
       </form>
